@@ -11,27 +11,27 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="color-dark-gray animation" onclick="changeEnclosing()">
-      <div class="text-red" id="opening">[</div>
-      <div class="text-cyan capital">G</div>
-      <div class="text-light-gray hidden" id="uillaume">uillaume&nbsp;</div>
-      <div class="text-green capital reversed">C</div>
-      <div class="text-light-gray hidden" id="omte">omte</div>
-      <div class="text-red last" id="closing">]</div>
+  <body data-theme="dark">
+    <div class="animation" onclick="changeEnclosing()">
+      <div class="text-accent" id="opening">[</div>
+      <div class="capital">G</div>
+      <div class="hidden" id="uillaume">uillaume</div>
+      <div class="capital reversed">C</div>
+      <div class="hidden" id="omte">omte</div>
+      <div class="text-accent" id="closing">]</div>
     </div>
+    <br />
+    <button class="text-secondary" onclick="toggleTheme()">Toggle theme</button>
   </body>
-  <script>
-    const openingChars = `[{("*\`_`.split("");
-    const closingChars = `]})"*\`_`.split("");
-    function changeEnclosing() {
-      const openingDiv = document.getElementById("opening");
-      const closingDiv = document.getElementById("closing");
-      let idx = openingChars.findIndex((c) => c === openingDiv.innerText) + 1;
-      idx %= openingChars.length;
-      openingDiv.innerText = openingChars[idx];
-      closingDiv.innerText = closingChars[idx];
+  <script type="text/javascript">
+    function toggleTheme() {
+      const body = document.getElementsByTagName("body")[0];
+      body.setAttribute(
+        "data-theme",
+        body.getAttribute("data-theme") === "dark" ? "light" : "dark"
+      );
     }
   </script>
 </html>

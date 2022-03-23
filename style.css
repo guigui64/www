@@ -9,9 +9,31 @@
   --color-sonokai-cyan: #76cce0;
   --color-sonokai-light-gray: #e2e2e3;
   --color-sonokai-gray: #7f8490;
+  --background: var(--color-sonokai-light-gray);
+  --text-primary: var(--color-sonokai-dark-gray);
+  --text-secondary: var(--color-sonokai-gray);
+  --accent: var(--color-sonokai-red);
+}
+
+[data-theme="dark"] {
+  --background: var(--color-sonokai-dark-gray);
+  --text-primary: var(--color-sonokai-light-gray);
+  --text-secondary: var(--color-sonokai-gray);
+  --accent: var(--color-sonokai-magenta);
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--background);
 }
 
 /* colored text */
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-accent {
+  color: var(--accent);
+}
 .text-dark-gray {
   color: var(--color-sonokai-dark-gray);
 }
@@ -80,16 +102,16 @@
 .animation > div {
   display: inline-block;
   /* margin-right: -0.6em; for mono */
-  margin-right: -0.2em;
+  margin-right: -0.25em;
 }
-.animation > .last {
+.animation :last-child {
   /* margin-left: 0.04em; for mono */
   margin-right: 0;
 }
 .animation > .hidden {
   width: 0;
   opacity: 0;
-  transition: width 1s ease-in-out, opacity 1s ease-in-out;
+  transition: 1s ease-in-out;
   overflow: hidden;
   vertical-align: bottom;
 }
@@ -97,14 +119,14 @@
   opacity: 100%;
 }
 .animation:hover > #uillaume {
-  width: 7.5ch; /* 9ch; for mono */
+  width: 7.3ch; /* 9ch; for mono */
 }
 .animation:hover > #omte {
   width: 4.2ch; /* 4ch; for mono */
 }
 .animation > .reversed {
   transform: scaleX(-1);
-  transition: transform 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .animation:hover > .reversed {
   transform: scaleX(1);
