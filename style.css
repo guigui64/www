@@ -1,0 +1,111 @@
+/* Sonokai colors */
+:root {
+  --color-sonokai-dark-gray: #2c2e34;
+  --color-sonokai-red: #fc5d7c;
+  --color-sonokai-green: #9ed072;
+  --color-sonokai-yellow: #e7c664;
+  --color-sonokai-orange: #f39660;
+  --color-sonokai-magenta: #b39df3;
+  --color-sonokai-cyan: #76cce0;
+  --color-sonokai-light-gray: #e2e2e3;
+  --color-sonokai-gray: #7f8490;
+}
+
+/* colored text */
+.text-dark-gray {
+  color: var(--color-sonokai-dark-gray);
+}
+.text-red {
+  color: var(--color-sonokai-red);
+}
+.text-green {
+  color: var(--color-sonokai-green);
+}
+.text-yellow {
+  color: var(--color-sonokai-yellow);
+}
+.text-orange {
+  color: var(--color-sonokai-orange);
+}
+.text-magenta {
+  color: var(--color-sonokai-magenta);
+}
+.text-cyan {
+  color: var(--color-sonokai-cyan);
+}
+.text-light-gray {
+  color: var(--color-sonokai-light-gray);
+}
+.text-gray {
+  color: var(--color-sonokai-gray);
+}
+/* colored background */
+.color-dark-gray {
+  background-color: var(--color-sonokai-dark-gray);
+}
+.color-red {
+  background-color: var(--color-sonokai-red);
+}
+.color-green {
+  background-color: var(--color-sonokai-green);
+}
+.color-yellow {
+  background-color: var(--color-sonokai-yellow);
+}
+.color-orange {
+  background-color: var(--color-sonokai-orange);
+}
+.color-magenta {
+  background-color: var(--color-sonokai-magenta);
+}
+.color-cyan {
+  background-color: var(--color-sonokai-cyan);
+}
+.color-light-gray {
+  background-color: var(--color-sonokai-light-gray);
+}
+.color-gray {
+  background-color: var(--color-sonokai-gray);
+}
+
+/* animation stuff */
+.animation {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.animation > div {
+  display: inline-block;
+  /* margin-right: -0.6em; for mono */
+  margin-right: -0.2em;
+}
+.animation > .last {
+  /* margin-left: 0.04em; for mono */
+  margin-right: 0;
+}
+.animation > .hidden {
+  width: 0;
+  opacity: 0;
+  transition: width 1s ease-in-out, opacity 1s ease-in-out;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.animation:hover > .hidden {
+  opacity: 100%;
+}
+.animation:hover > #uillaume {
+  width: 7.5ch; /* 9ch; for mono */
+}
+.animation:hover > #omte {
+  width: 4.2ch; /* 4ch; for mono */
+}
+.animation > .reversed {
+  transform: scaleX(-1);
+  transition: transform 1s ease-in-out;
+}
+.animation:hover > .reversed {
+  transform: scaleX(1);
+}

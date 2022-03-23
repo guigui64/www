@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="color-dark-gray animation" onclick="changeEnclosing()">
+      <div class="text-red" id="opening">[</div>
+      <div class="text-cyan capital">G</div>
+      <div class="text-light-gray hidden" id="uillaume">uillaume&nbsp;</div>
+      <div class="text-green capital reversed">C</div>
+      <div class="text-light-gray hidden" id="omte">omte</div>
+      <div class="text-red last" id="closing">]</div>
+    </div>
+  </body>
+  <script>
+    const openingChars = `[{("*\`_`.split("");
+    const closingChars = `]})"*\`_`.split("");
+    function changeEnclosing() {
+      const openingDiv = document.getElementById("opening");
+      const closingDiv = document.getElementById("closing");
+      let idx = openingChars.findIndex((c) => c === openingDiv.innerText) + 1;
+      idx %= openingChars.length;
+      openingDiv.innerText = openingChars[idx];
+      closingDiv.innerText = closingChars[idx];
+    }
+  </script>
+</html>
