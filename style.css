@@ -25,6 +25,24 @@
 body {
   color: var(--text-primary);
   background-color: var(--background);
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--accent);
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+  background-color: var(--background);
+}
+
+footer {
+  margin-top: 150px;
+  height: 200vh;
 }
 
 /* colored text */
@@ -92,8 +110,8 @@ body {
 
 /* animation stuff */
 .animation {
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
   width: auto;
   display: inline-block;
   overflow: hidden;
@@ -111,7 +129,7 @@ body {
 .animation > .hidden {
   width: 0;
   opacity: 0;
-  transition: 1s ease-in-out;
+  transition: 0.4s ease-in-out;
   overflow: hidden;
   vertical-align: bottom;
 }
@@ -119,14 +137,16 @@ body {
   opacity: 100%;
 }
 .animation:hover > #uillaume {
-  width: 7.3ch; /* 9ch; for mono */
+  /* width: 7.3ch; for roboto -- 9ch; for mono */
+  width: 6.5ch;
 }
 .animation:hover > #omte {
-  width: 4.2ch; /* 4ch; for mono */
+  /* width: 4.2ch; for roboto -- 4ch; for mono */
+  width: 3.8ch;
 }
 .animation > .reversed {
   transform: scaleX(-1);
-  transition: 1s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .animation:hover > .reversed {
   transform: scaleX(1);
