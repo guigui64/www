@@ -9,7 +9,7 @@ export default function Header({ active }: HeaderProps) {
   ];
   return (
     <header
-      class={`w-full bg-gray-100 dark:bg-gray-700 py-6 px-8 flex flex-col md:flex-row gap-6 text-gray-700 dark:text-gray-300 text-md font-bold ${
+      class={`w-full bg-gray-100 dark:bg-gray-700 py-6 px-8 flex flex-col sm:flex-row gap-6 text-gray-700 dark:text-gray-300 text-md font-bold ${
         active === "/" ? "justify-end" : ""
       }`}
     >

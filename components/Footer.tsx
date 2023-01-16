@@ -61,13 +61,13 @@ export default function Footer() {
       </div>
 
       {menus.map((item) => (
-        <div class="mb-4" key={item.title}>
+        <div class="flex flex-row md:flex-col gap-4" key={item.title}>
           <div class="font-bold text-gray-700 dark:text-gray-300">
             {item.title}
           </div>
-          <ul class="mt-2">
+          <ul class="flex flex-row md:flex-col gap-4">
             {item.children.map((child) => (
-              <li class="mt-2" key={child.name}>
+              <li class="" key={child.name}>
                 <a
                   class="text-gray-500 hover:(text-gray-700 dark:text-gray-300)"
                   href={child.href}
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
       ))}
 
-      <div class="text-gray-500 space-y-2 text-right">
+      <div class="text-gray-500 space-y-2 md:text-right">
         <div class="text-sm">
           Copyright © {new Date().getFullYear()} Guillaume Comte
           <br />
@@ -91,7 +91,7 @@ export default function Footer() {
         <a
           href="https://fresh.deno.dev"
           target="_blank"
-          class="mt-3 flex items-center justify-end gap-1"
+          class="mt-3 flex items-center md:justify-end gap-1"
         >
           <img src={asset("/fresh-logo.svg")} alt="Fresh logo" class="w-6" />
           Made with <span class="font-bold">Fresh</span>
