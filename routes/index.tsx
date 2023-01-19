@@ -1,24 +1,8 @@
 import { Head } from "$fresh/runtime.ts";
 import Hero from "../components/Hero.tsx";
-import FileDownload from "@tabler/icons/file-download.tsx";
 import { ComponentChildren } from "https://esm.sh/v102/preact@10.11.0/src/index";
-
-function About() {
-  return (
-    <>
-      <a
-        class="hover:(text-gray-900 dark:text-gray-100) flex gap-1"
-        href="/resume-guillaume-comte-en.pdf"
-        target="_blank"
-      >
-        <FileDownload />Get my resume
-      </a>
-      <div class="h-64 flex justify-center items-center">
-        <p>TODO about me</p>
-      </div>
-    </>
-  );
-}
+import Me from "../components/Me.tsx";
+import HomeNav from "../islands/HomeNav.tsx";
 
 function Card({ children }: { children: ComponentChildren }) {
   return (
@@ -32,29 +16,31 @@ function Card({ children }: { children: ComponentChildren }) {
 
 function Projects() {
   return (
-    <ul class="h-24 flex justify-start items-stretch gap-2 px-2 overflow-x-auto hide-scrollbar">
-      {[...Array(40).keys()].map((k) => (
-        <li>
-          <Card>Project {k + 1}</Card>
-        </li>
-      ))}
-    </ul>
+    <section id="projects">
+      <ul class="h-24 flex justify-start items-stretch gap-2 px-2 overflow-x-auto hide-scrollbar">
+        {[...Array(40).keys()].map((k) => (
+          <li>
+            <Card>Project {k + 1}</Card>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
 function Recommendations() {
   return (
-    <div class="h-64 flex justify-center items-center">
+    <section id="recommendations" class="h-64 flex justify-center items-center">
       <p>TODO recommendations</p>
-    </div>
+    </section>
   );
 }
 
 function Contact() {
   return (
-    <div id="contact" class="h-64 flex justify-center items-center">
+    <section id="contact" class="h-64 flex justify-center items-center">
       <p>TODO contact form</p>
-    </div>
+    </section>
   );
 }
 
@@ -65,10 +51,13 @@ export default function Home() {
         <title>Guillaume Comte - Full Stack Web Developer</title>
       </Head>
       <Hero />
-      <About />
-      <Projects />
-      <Recommendations />
-      <Contact />
+      <HomeNav class="pl-4" />
+      <main>
+        <Me />
+        <Projects />
+        <Recommendations />
+        <Contact />
+      </main>
     </>
   );
 }

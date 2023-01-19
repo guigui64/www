@@ -30,7 +30,7 @@ export default function App({ Component }: AppProps) {
         />
         <link
           rel="stylesheet"
-          href={asset("index.css")}
+          href={asset("styles.css")}
         />
       </Head>
       <body class="dark:(text-white bg-gray-900)">

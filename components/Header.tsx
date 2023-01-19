@@ -5,7 +5,6 @@ type HeaderProps = { active: string };
 export default function Header({ active }: HeaderProps) {
   const menus = [
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/#contact" },
   ];
   return (
     <header
