@@ -16,7 +16,9 @@ import HomeNav from "../components/HomeNav.tsx";
 function Projects() {
   return (
     <section id="projects">
-      <h1 class="text-3xl uppercase font-bold py-4">Projects</h1>
+      <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 py-4">
+        Projects
+      </h1>
       <p>Under construction...</p>
       {
         /*
@@ -36,7 +38,9 @@ function Projects() {
 function Recommendations() {
   return (
     <section id="recommendations">
-      <h1 class="text-3xl uppercase font-bold py-4">They recommend me</h1>
+      <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 py-4">
+        They recommend me
+      </h1>
       <p>Under construction...</p>
     </section>
   );
@@ -45,7 +49,9 @@ function Recommendations() {
 function Contact() {
   return (
     <section id="contact">
-      <h1 class="text-3xl uppercase font-bold py-4">Contact</h1>
+      <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 py-4">
+        Contact
+      </h1>
       <p>Want to get in touch? Please fill out this form.</p>
       <p>Under construction...</p>
     </section>

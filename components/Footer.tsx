@@ -74,7 +74,6 @@ export default function Footer() {
                   <a
                     class="text-gray-600 dark:text-gray-400 hover:(text-gray-700 dark:text-gray-300)"
                     href={child.href}
-                    target="_blank"
                   >
                     {child.name}
                   </a>

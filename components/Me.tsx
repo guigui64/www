@@ -46,7 +46,9 @@ export default function Me() {
       id="about-me"
       class="scroll-mt-16 relative"
     >
-      <h1 class="text-3xl uppercase font-bold py-4">About me</h1>
+      <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 py-4">
+        About me
+      </h1>
       {/* TODO create CV and show button */}
       <Button class="hidden absolute top-4 right-0">
         <a
@@ -70,7 +72,9 @@ export default function Me() {
         </p>
         <div class="space-y-3">
           <div>
-            <h2 class="text-2xl uppercase font-bold py-2">Education</h2>
+            <h2 class="text-2xl uppercase font-bold text-gray-600 dark:text-gray-400 py-2">
+              Education
+            </h2>
             <ul>
               <li>
                 <Edux
@@ -82,7 +86,9 @@ export default function Me() {
             </ul>
           </div>
           <div>
-            <h2 class="text-2xl uppercase font-bold py-2">Experience</h2>
+            <h2 class="text-2xl uppercase font-bold text-gray-600 dark:text-gray-400 py-2">
+              Experience
+            </h2>
             <ul>
               <li>
                 <Edux
@@ -101,7 +107,9 @@ export default function Me() {
             </ul>
           </div>
           <div>
-            <h2 class="text-2xl uppercase font-bold py-2">Skills</h2>
+            <h2 class="text-2xl uppercase font-bold text-gray-600 dark:text-gray-400 py-2">
+              Skills
+            </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <ul>
                 <li>
