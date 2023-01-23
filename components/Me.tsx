@@ -72,14 +72,14 @@ export default function Me() {
         </h1>
         <div class="space-y-2">
           <p>
-            Bonjour! I'm a passionate and serious Full Stack Web Developer. You
-            can find here some of my experience and skills. I am looking forward
-            to meet you!
+            Bonjour! I'm a passionate Full Stack Web Developer. You can find
+            here some of my experience and skills as well as a form to contact
+            me. I am looking forward to meet you!
           </p>
           <p>
-            I live in Toulouse with my wife and son. I love playing Squash,
-            Padel, Tennis and Basketball. I also like video games, reading and
-            watching movies and TV shows (but who doesn't?).
+            I live in Toulouse (France) with my wife and son. I love playing
+            Squash, Padel, Tennis and Basketball. I also like video games,
+            reading and watching movies and TV shows (but who doesn't?).
           </p>
         </div>
         <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
