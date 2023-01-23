@@ -1,8 +1,9 @@
 import { asset } from "$fresh/runtime.ts";
 import ColorMode from "../islands/ColorMode.tsx";
+import MobileHeader from "../islands/MobileHeader.tsx";
 
 type Menu = { name: string; href: string };
-type HeaderProps = {
+export type HeaderProps = {
   active: string;
   sticky?: boolean;
   left?: Menu[];
@@ -13,18 +14,11 @@ const MENUS = [
   { name: "Blog", href: "/blog" },
 ];
 
-export default function Header(
-  { active, sticky, left, right = MENUS }: HeaderProps,
-) {
-  // TODO side nav under sm breakpoint
+function LargeHeader(props: Omit<HeaderProps, "sticky">) {
   return (
-    <header
-      class={`hidden sm:flex w-full bg-gray-100 dark:bg-gray-700 px-8 flex-row flex-wrap gap-6 text-gray-700 dark:text-gray-300 text-md font-bold h-14 ${
-        sticky ?? "sticky top-0 z-10 -mb-14"
-      }`}
-    >
+    <div class="hidden sm:flex px-8 flex-row flex-wrap gap-6 text-gray-700 dark:text-gray-300 text-md font-bold h-14">
       <ul class="flex-1 flex items-center gap-6">
-        {active !== "/" &&
+        {props.active !== "/" &&
           (
             <li>
               <div class="flex gap-2 items-center">
@@ -42,12 +36,12 @@ export default function Header(
               </div>
             </li>
           )}
-        {left && left.map((menu) => (
+        {props.left && props.left.map((menu) => (
           <li>
             <a
               href={menu.href}
               class={"hover:(text-gray-900 dark:text-gray-100) py-1 border-gray-500 dark:border-gray-300" +
-                (menu.href === active ? " border-b-2" : "")}
+                (menu.href === props.active ? " border-b-2" : "")}
             >
               {menu.name}
             </a>
@@ -55,12 +49,12 @@ export default function Header(
         ))}
       </ul>
       <ul class="flex items-center gap-6">
-        {right.map((menu) => (
+        {props.right && props.right.map((menu) => (
           <li>
             <a
               href={menu.href}
               class={"hover:(text-gray-900 dark:text-gray-100) py-1 border-gray-500 dark:border-gray-300" +
-                (menu.href === active ? " border-b-2" : "")}
+                (menu.href === props.active ? " border-b-2" : "")}
             >
               {menu.name}
             </a>
@@ -73,6 +67,23 @@ export default function Header(
         </button>
         <ColorMode />
       </div>
+    </div>
+  );
+}
+
+export default function Header(
+  props: HeaderProps,
+) {
+  props.right = props.right ?? MENUS;
+  return (
+    <header
+      class={`w-full bg-gray-100 dark:bg-gray-700 ${
+        props.sticky ??
+          "sticky top-0 z-10 -mb-12 sm:-mb-14"
+      }`}
+    >
+      <LargeHeader {...props} />
+      <MobileHeader {...props} />
     </header>
   );
 }

@@ -21,7 +21,7 @@ function Edux(props: EduxProps) {
   return (
     <div>
       <div class="text-lg flex flex-col md:justify-between md:flex-row">
-        <p class="md:order-2 text-gray-600 dark:text-gray-400">
+        <p class="md:order-2 text-gray-600 dark:text-gray-400 md:text-right">
           {props.date}
         </p>
         <h4 class="font-medium md:order-1">{props.title}</h4>

@@ -104,9 +104,9 @@ function Contact() {
 }
 
 const LINKS = [
-  { name: "About me", href: "/#about-me" },
-  { name: "Projects", href: "/#projects" },
-  { name: "Contact", href: "/#contact" },
+  { name: "About me", href: "#about-me" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Home() {

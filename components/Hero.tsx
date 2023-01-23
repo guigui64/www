@@ -4,8 +4,8 @@ import ArrowDown from "@tabler/icons/arrow-down.tsx";
 export default function Hero() {
   return (
     <div class="sm:min-h-screen min-w-screen bg-gray-100 dark:bg-gray-700 flex flex-col justify-between items-center">
-      <div></div>
-      <div class="flex flex-col md:flex-row gap-y-5 gap-x-10 items-center z-20">
+      <div class=""></div>
+      <div class="flex flex-col md:flex-row gap-y-5 gap-x-10 items-center mt-12 mb-4 sm:(mt-14 mb-14)">
         <img
           class="rounded-full w-24 sm:w-52 animate__animated animate__fadeIn"
           src={asset("avatar-big.jpg")}
@@ -22,12 +22,12 @@ export default function Hero() {
           </h2>
         </div>
       </div>
-      <div class="hidden sm:block pr-8 pb-2 animate__animated animate__fadeIn animate__delay-5s">
+      <div class="hidden sm:block pb-2 animate__animated animate__fadeIn animate__delay-5s">
         <div class="motion-safe:animate-bounce">
           <ArrowDown size={16} />
         </div>
       </div>
-      <div class="block sm:hidden mt-4" />
+      <div class="block sm:hidden" />
     </div>
   );
 }
