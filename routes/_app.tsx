@@ -33,7 +33,7 @@ export default function App({ Component }: AppProps) {
           href={asset("styles.css")}
         />
       </Head>
-      <body class="dark:(text-white bg-gray-900)">
+      <body class="text-gray-900 dark:(text-gray-50 bg-gray-900)">
         <Component />
         <Footer />
       </body>

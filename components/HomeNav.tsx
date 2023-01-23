@@ -6,7 +6,7 @@ const LINKS = [
 
 export default function HomeNav() {
   return (
-    <nav class="flex gap-6 items-center h-16 bg-gray-100 dark:bg-gray-700 sticky top-0 -mt-16 z-10 pl-8">
+    <nav class="hidden sm:flex gap-6 items-center h-16 bg-gray-100 dark:bg-gray-700 sticky top-0 -mt-16 z-10 pl-8">
       {LINKS.map(({ name, href }) => (
         <a
           class="text-gray-500 dark:text-gray-400 hover:(text-gray-700 dark:text-gray-200)"
