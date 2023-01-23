@@ -46,9 +46,6 @@ export default function Me() {
       id="about-me"
       class="scroll-mt-16 relative"
     >
-      <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 py-4">
-        About me
-      </h1>
       {/* TODO create CV and show button */}
       <Button class="hidden absolute top-4 right-0">
         <a
@@ -59,93 +56,90 @@ export default function Me() {
           <FileDownload />Resume
         </a>
       </Button>
-      <div class="space-y-2">
-        <p>
-          Bonjour! I was born on 24.07.1990 in Pau (South West of France) and I
-          am a freelance Full Stack Web developer. I love my job and am looking
-          forward to meet you if you want to work with me.
-        </p>
-        <p>
-          I live in Toulouse. I have a beautiful wife and an adorable son. I
-          love playing Squash, Padel, Tennis and Basketball. I also like video
-          games, reading and watching movies and TV shows (but who doesn't?).
-        </p>
-        <div class="space-y-3">
-          <div>
-            <h2 class="text-2xl uppercase font-bold text-gray-600 dark:text-gray-400 py-2">
-              Education
-            </h2>
-            <ul>
-              <li>
-                <Edux
-                  title="Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse"
-                  date="2010 - 2013"
-                  text="Master's degree in Aerospace, Aeronautical and Space Engineering"
-                />
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="text-2xl uppercase font-bold text-gray-600 dark:text-gray-400 py-2">
-              Experience
-            </h2>
-            <ul>
-              <li>
-                <Edux
-                  title="Airbus Defence and Space, Toulouse"
-                  date="2016 - present"
-                  text="Senior Software Architect"
-                />
-              </li>
-              <li>
-                <Edux
-                  title="Atos, Toulon"
-                  date="2013 - 2016"
-                  text="Software Developer"
-                />
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="text-2xl uppercase font-bold text-gray-600 dark:text-gray-400 py-2">
-              Skills
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <ul>
-                <li>
-                  <Skill icon={IconReact} title="React" level={10} />
-                  <Skill
-                    icon={IconFresh}
-                    title="Fresh"
-                    level={10}
-                  />
-                  <Skill icon={IconSvelte} title="Svelte" level={7} />
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <Skill
-                    icon={IconTypescript}
-                    title="Typescript/Javascript"
-                    level={10}
-                  />
-                  <Skill
-                    icon={IconGolang}
-                    title="Golang"
-                    level={9}
-                  />
-                  <Skill icon={IconReact} title="Python" level={7} />
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <Skill icon={IconVim} title="(Neo)Vim" level={10} />
-                  <Skill icon={IconLinux} title="Linux/Bash" level={9} />
-                  <Skill icon={IconWindows} title="Office" level={7} />
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div class="grid lg:grid-cols-desktop grid-cols-1 gap-x-10 gap-y-6">
+        <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 whitespace-nowrap lg:text-right">
+          About me
+        </h1>
+        <div class="space-y-2">
+          <p>
+            Bonjour! I was born on 24.07.1990 in Pau (South West of France) and
+            I am a freelance Full Stack Web developer. I love my job and am
+            looking forward to meet you if you want to work with me.
+          </p>
+          <p>
+            I live in Toulouse. I have a beautiful wife and an adorable son. I
+            love playing Squash, Padel, Tennis and Basketball. I also like video
+            games, reading and watching movies and TV shows (but who doesn't?).
+          </p>
+        </div>
+        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+          Education
+        </h2>
+        <ul>
+          <li>
+            <Edux
+              title="Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse"
+              date="2010 - 2013"
+              text="Master's degree in Aerospace, Aeronautical and Space Engineering"
+            />
+          </li>
+        </ul>
+        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+          Experience
+        </h2>
+        <ul>
+          <li>
+            <Edux
+              title="Airbus Defence and Space, Toulouse"
+              date="2016 - present"
+              text="Senior Software Architect"
+            />
+          </li>
+          <li>
+            <Edux
+              title="Atos, Toulon"
+              date="2013 - 2016"
+              text="Software Developer"
+            />
+          </li>
+        </ul>
+        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+          Skills
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <ul>
+            <li>
+              <Skill icon={IconReact} title="React" level={10} />
+              <Skill
+                icon={IconFresh}
+                title="Fresh"
+                level={10}
+              />
+              <Skill icon={IconSvelte} title="Svelte" level={7} />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Skill
+                icon={IconTypescript}
+                title="Typescript/Javascript"
+                level={10}
+              />
+              <Skill
+                icon={IconGolang}
+                title="Golang"
+                level={9}
+              />
+              <Skill icon={IconReact} title="Python" level={7} />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Skill icon={IconVim} title="(Neo)Vim" level={10} />
+              <Skill icon={IconLinux} title="Linux/Bash" level={9} />
+              <Skill icon={IconWindows} title="Office" level={7} />
+            </li>
+          </ul>
         </div>
       </div>
     </section>

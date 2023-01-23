@@ -10,6 +10,9 @@ export default {
         gray: colors.blueGray,
         teal: colors.teal,
       },
+      gridTemplateColumns: {
+        desktop: "1fr 6fr",
+      },
       keyframes: {
         wave: {
           "0%": { transform: "rotate(0deg)" },

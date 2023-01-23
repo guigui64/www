@@ -23,7 +23,7 @@ export default function Hero() {
           </h2>
         </div>
       </div>
-      <div class="self-end pr-4 animate__animated animate__fadeIn animate__delay-5s z-20">
+      <div class="self-end pr-8 pb-2 animate__animated animate__fadeIn animate__delay-5s z-20">
         <div class="motion-safe:animate-bounce">
           <ArrowDown size={16} />
         </div>

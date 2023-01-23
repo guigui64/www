@@ -36,7 +36,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer class="bg-gray-100 dark:bg-gray-700 w-full mt-8">
+    <footer class="bg-gray-100 dark:bg-gray-700 w-full">
       <div class="flex flex-col md:flex-row max-w-screen-md mx-auto gap-8 md:gap-16 px-2 py-8 text-sm">
         <div class="flex-1">
           <div class="flex items-center">
