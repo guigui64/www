@@ -54,7 +54,7 @@ export default function Me() {
   return (
     <section
       id="about-me"
-      class="scroll-mt-20 relative"
+      class="scroll-mt-16 relative"
     >
       {/* TODO create CV and show button */}
       <Button class="hidden absolute top-4 right-0">
