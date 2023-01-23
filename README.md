@@ -1,11 +1,7 @@
-# fresh project
+# Guillaume Comte
 
-### Usage
+## Full Stack Web Developer
 
-Start the project:
+https://guillaumecomte.deno.dev
 
-```
-deno task start
-```
-
-This will watch the project directory and restart as necessary.
+Personal website made with [Fresh](https://fresh.deno.dev)

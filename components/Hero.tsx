@@ -9,7 +9,7 @@ export default function Hero() {
       <div class="flex flex-col md:flex-row gap-10 items-center">
         <img
           class="rounded-full w-52 animate__animated animate__fadeIn"
-          src={asset("avatar.jpg")}
+          src={asset("avatar-big.jpg")}
         />
         <div class="space-y-2 text-center md:text-left">
           <h1 class="text-4xl font-bold animate__animated animate__fadeInUp animated__delay-1s">

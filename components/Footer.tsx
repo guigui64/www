@@ -36,66 +36,70 @@ export default function Footer() {
   ];
 
   return (
-    <footer class="flex flex-col md:flex-row w-full max-w-screen-lg mx-auto gap-8 md:gap-16 px-8 py-8 text-sm">
-      <div class="flex-1">
-        <div class="flex items-center">
+    <footer class="bg-gray-100 dark:bg-gray-700 w-full mt-8">
+      <div class="flex flex-col md:flex-row max-w-screen-md mx-auto gap-8 md:gap-16 px-2 py-8 text-sm">
+        <div class="flex-1">
+          <div class="flex items-center">
+            <a
+              class="font-bold text-2xl text-gray-700 dark:text-gray-300"
+              href="/"
+            >
+              Guillaume Comte
+            </a>
+          </div>
+          <div class="text-gray-600 dark:text-gray-400">
+            Full Stack Web Developer
+          </div>
+          <div class="space-x-2 text-gray-600 dark:text-gray-400 mt-3">
+            {socials.map(({ icon, href }) => (
+              <a
+                class="inline-block hover:(text-gray-700 dark:text-gray-300)"
+                href={href}
+                target="_blank"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {menus.map((item) => (
+          <div class="flex flex-row md:flex-col gap-4" key={item.title}>
+            <div class="font-bold text-gray-700 dark:text-gray-300">
+              {item.title}
+            </div>
+            <ul class="flex flex-row md:flex-col gap-4">
+              {item.children.map((child) => (
+                <li class="" key={child.name}>
+                  <a
+                    class="text-gray-600 dark:text-gray-400 hover:(text-gray-700 dark:text-gray-300)"
+                    href={child.href}
+                    target="_blank"
+                  >
+                    {child.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <div class="text-gray-600 dark:text-gray-400 space-y-2 md:text-right">
+          <div class="text-sm">
+            Copyright © {new Date().getFullYear()} Guillaume Comte
+            <br />
+            All right reserved
+          </div>
+
           <a
-            class="font-bold text-2xl text-gray-700 dark:text-gray-300"
-            href="/"
+            href="https://fresh.deno.dev"
+            target="_blank"
+            class="mt-3 flex items-center md:justify-end gap-1"
           >
-            Guillaume Comte
+            <img src={asset("/fresh-logo.svg")} alt="Fresh logo" class="w-6" />
+            Made with <span class="font-bold">Fresh</span>
           </a>
         </div>
-        <div class="text-gray-500">Full Stack Web Developer</div>
-        <div class="space-x-2 text-gray-500 mt-3">
-          {socials.map(({ icon, href }) => (
-            <a
-              class="inline-block hover:(text-gray-700 dark:text-gray-300)"
-              href={href}
-              target="_blank"
-            >
-              {icon}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {menus.map((item) => (
-        <div class="flex flex-row md:flex-col gap-4" key={item.title}>
-          <div class="font-bold text-gray-700 dark:text-gray-300">
-            {item.title}
-          </div>
-          <ul class="flex flex-row md:flex-col gap-4">
-            {item.children.map((child) => (
-              <li class="" key={child.name}>
-                <a
-                  class="text-gray-500 hover:(text-gray-700 dark:text-gray-300)"
-                  href={child.href}
-                  target="_blank"
-                >
-                  {child.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-
-      <div class="text-gray-500 space-y-2 md:text-right">
-        <div class="text-sm">
-          Copyright © {new Date().getFullYear()} Guillaume Comte
-          <br />
-          All right reserved
-        </div>
-
-        <a
-          href="https://fresh.deno.dev"
-          target="_blank"
-          class="mt-3 flex items-center md:justify-end gap-1"
-        >
-          <img src={asset("/fresh-logo.svg")} alt="Fresh logo" class="w-6" />
-          Made with <span class="font-bold">Fresh</span>
-        </a>
       </div>
     </footer>
   );

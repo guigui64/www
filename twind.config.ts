@@ -30,4 +30,9 @@ export default {
       animation: ["responsive", "motion-safe", "motion-reduce"],
     },
   },
+  plugins: {
+    "scroll-mt": (parts, context) => ({
+      "scroll-margin-top": context.theme("spacing", parts[0]),
+    }),
+  },
 } as Options;
