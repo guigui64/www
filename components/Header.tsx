@@ -28,7 +28,7 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
                 />
                 <a
                   href="/"
-                  class="hover:(text-gray-900 dark:text-gray-100)"
+                  class="hover:(text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 dark:(from-purple-400 to-blue-400))"
                   id="name-in-header"
                 >
                   Guillaume Comte
