@@ -71,17 +71,11 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
         </div>
       </div>
       <div
-        class={`absolute w-full transition-all duration-300 ${
-          checked.value ? "min-h-screen" : "min-h-0"
+        class={`absolute w-full bg-black transition-all duration-300 ${
+          checked.value ? "min-h-screen bg-opacity-80" : "min-h-0 bg-opacity-0"
         }`}
         onClick={() => checked.value = false}
-      >
-        <div
-          class={`w-full h-screen bg-black transition-all duration-100 ${
-            checked.value ? "bg-opacity-80" : "bg-opacity-0"
-          }`}
-        />
-      </div>
+      />
       <div class="absolute top-12 w-full bg-gray-100 dark:bg-gray-700">
         <div
           class={`flex flex-col gap-2 items-center justify-center overflow-hidden transition-all duration-300 ${
