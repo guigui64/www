@@ -49,7 +49,7 @@ export default function Contact(props: ContactProps) {
               <a href="/#contact" class="font-bold hover:underline">here</a>.
             </p>
           )}
-        <form class="space-y-3 py-3">
+        <form action="#contact" class="space-y-3 py-3">
           <div class="space-y-1">
             <label for="email" class="uppercase text-sm">Email</label>
             <input
