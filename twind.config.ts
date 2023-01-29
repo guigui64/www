@@ -9,6 +9,7 @@ export default {
       colors: {
         gray: colors.blueGray,
         teal: colors.teal,
+        cyan: colors.cyan,
       },
       gridTemplateColumns: {
         desktop: "1fr 6fr",

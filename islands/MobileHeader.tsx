@@ -17,7 +17,7 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
               <div class="flex gap-2 items-center">
                 <img
                   class="rounded-full w-8 h-8"
-                  src={asset("avatar-small.jpg")}
+                  src={asset("avatar-small.webp")}
                   alt="avatar"
                 />
                 <a

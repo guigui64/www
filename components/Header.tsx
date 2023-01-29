@@ -27,12 +27,12 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
               <div class="flex gap-2 items-center">
                 <img
                   class="rounded-full w-8 h-8"
-                  src={asset("avatar-small.jpg")}
+                  src={asset("avatar-small.webp")}
                   alt="avatar"
                 />
                 <a
                   href="/"
-                  class="hover:(text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 dark:(from-purple-400 to-blue-400))"
+                  class="hover:(text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 dark:(from-cyan-400 to-teal-400))"
                 >
                   Guillaume Comte
                 </a>
