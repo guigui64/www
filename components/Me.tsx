@@ -63,8 +63,9 @@ export default function Me() {
       id="about-me"
       class="scroll-mt-16 relative"
     >
-      {/* TODO create CV and show button */}
-      <Button class="hidden absolute top-4 right-0">
+      {
+        /* TODO create CV and show button
+      <Button class="absolute top-4 right-0">
         <a
           class="flex gap-1"
           href="/resume-guillaume-comte-en.pdf"
@@ -73,6 +74,8 @@ export default function Me() {
           <FileDownload />Resume
         </a>
       </Button>
+      */
+      }
       <div class="grid lg:grid-cols-desktop grid-cols-1 gap-x-10 gap-y-6">
         <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 whitespace-nowrap lg:text-right">
           {t.titles.aboutme}

@@ -1,0 +1,101 @@
+/* Manually tree shaked css from https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css */
+
+:root {
+  --animate-duration: 1s;
+  --animate-repeat: 1;
+  /* All delay classes will take half the time to start */
+  --animate-delay: 0.3s;
+}
+
+.animate__animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__animated.animate__delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+}
+.animate__animated.animate__delay-2s {
+  -webkit-animation-delay: calc(1s * 2);
+  animation-delay: calc(1s * 2);
+  -webkit-animation-delay: calc(var(--animate-delay) * 2);
+  animation-delay: calc(var(--animate-delay) * 2);
+}
+.animate__animated.animate__delay-3s {
+  -webkit-animation-delay: calc(1s * 3);
+  animation-delay: calc(1s * 3);
+  -webkit-animation-delay: calc(var(--animate-delay) * 3);
+  animation-delay: calc(var(--animate-delay) * 3);
+}
+.animate__animated.animate__delay-4s {
+  -webkit-animation-delay: calc(1s * 4);
+  animation-delay: calc(1s * 4);
+  -webkit-animation-delay: calc(var(--animate-delay) * 4);
+  animation-delay: calc(var(--animate-delay) * 4);
+}
+.animate__animated.animate__delay-5s {
+  -webkit-animation-delay: calc(1s * 5);
+  animation-delay: calc(1s * 5);
+  -webkit-animation-delay: calc(var(--animate-delay) * 5);
+  animation-delay: calc(var(--animate-delay) * 5);
+}
+/* Fading entrances  */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}

@@ -97,7 +97,11 @@ export default function Footer() {
             target="_blank"
             class="mt-3 flex items-center md:justify-end gap-1"
           >
-            <img src={asset("/fresh-logo.svg")} alt="Fresh logo" class="w-6" />
+            <img
+              src={asset("/fresh-logo.svg")}
+              alt="Fresh logo"
+              class="w-6 h-6"
+            />
             {t.footer.madewith} <span class="font-bold">Fresh</span>
           </a>
         </div>
@@ -111,7 +115,8 @@ function BrandMalt() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 186.795 186.795"
-      class="w-5"
+      class="w-5 h-5"
+      alt="Malt logo"
       style={{ paddingBottom: 2 }}
       stroke="currentColor"
       fill="currentColor"

@@ -26,13 +26,13 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
             <li>
               <div class="flex gap-2 items-center">
                 <img
-                  class="rounded-full w-8"
+                  class="rounded-full w-8 h-8"
                   src={asset("avatar-small.jpg")}
+                  alt="avatar"
                 />
                 <a
                   href="/"
                   class="hover:(text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 dark:(from-purple-400 to-blue-400))"
-                  id="name-in-header"
                 >
                   Guillaume Comte
                 </a>

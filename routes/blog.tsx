@@ -27,6 +27,10 @@ export default function Blog(props: PageProps<Data>) {
     <>
       <Head>
         <title>Guillaume's Blog</title>
+        <meta
+          name="description"
+          content="Guillaume Comte - Full Stack Web Developer - Blog"
+        />
       </Head>
       <Header active="/blog" lang={props.data.lang} />
       <main class="h-96 flex flex-col gap-1 justify-center items-center">
