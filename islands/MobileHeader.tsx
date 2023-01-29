@@ -2,6 +2,7 @@ import { asset } from "$fresh/runtime.ts";
 import { useSignal } from "@preact/signals";
 import { HeaderProps } from "../components/Header.tsx";
 import ColorMode from "./ColorMode.tsx";
+import Language from "./Language.tsx";
 
 export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
   const checked = useSignal(false);
@@ -95,9 +96,7 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
               </a>
             </div>
           ))}
-          <button class="hover:(text-gray-900 dark:text-gray-100) font-bold">
-            FR
-          </button>
+          <Language lang={props.lang} />
           <ColorMode />
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Balancer from "react-wrap-balancer";
 import FileDownload from "@tabler/icons/file-download.tsx";
 import { ComponentChildren } from "preact";
 import { T } from "../state.ts";
@@ -25,7 +26,11 @@ function Edux(props: EduxProps) {
         <p class="md:order-2 text-gray-600 dark:text-gray-400 md:text-right">
           {props.date}
         </p>
-        <h4 class="font-medium md:order-1">{props.title}</h4>
+        <h4 class="font-medium md:order-1">
+          <Balancer>
+            {props.title}
+          </Balancer>
+        </h4>
       </div>
       {props.text && (
         <p class="text-gray-600 dark:text-gray-400 whitespace-pre-wrap">

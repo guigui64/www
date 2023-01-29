@@ -1,4 +1,5 @@
 import { asset } from "$fresh/runtime.ts";
+import Balancer from "react-wrap-balancer";
 import ArrowDown from "@tabler/icons/arrow-down.tsx";
 import { T } from "../state.ts";
 
@@ -14,12 +15,14 @@ export default function Hero() {
         />
         <div class="space-y-2 text-center md:text-left">
           <h1 class="text-2xl sm:text-4xl font-bold animate__animated animate__fadeInUp animated__delay-1s">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 dark:(from-purple-400 to-blue-400)">
-              {t.hero.hello}
-            </span>{" "}
-            <span class="animate-wave inline-block">
-              👋
-            </span>
+            <Balancer>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 dark:(from-purple-400 to-blue-400)">
+                {t.hero.hello}
+              </span>{" "}
+              <span class="animate-wave inline-block">
+                👋
+              </span>
+            </Balancer>
           </h1>
           <h2 class="text-md sm:text-xl font-medium text-gray-600 dark:text-gray-400 animate__animated animate__fadeInUp animate__delay-2s">
             {t.hero.dev}
