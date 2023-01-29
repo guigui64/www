@@ -2,11 +2,13 @@ import { asset } from "$fresh/runtime.ts";
 import BrandGithub from "@tabler/icons/brand-github.tsx";
 import BrandTwitter from "@tabler/icons/brand-twitter.tsx";
 import BrandLinkedin from "@tabler/icons/brand-linkedin.tsx";
+import { T } from "../state.ts";
 
 export default function Footer() {
+  const t = T.value!;
   const menus = [
     {
-      title: "Links",
+      title: t.footer.links,
       children: [
         { name: "Blog", href: "/blog" },
         { name: "Contact", href: "/#contact" },
@@ -14,7 +16,7 @@ export default function Footer() {
       ],
     },
     {
-      title: "Legal",
+      title: t.footer.legal,
       children: [
         { name: "Cookies", href: "#" },
         { name: "SIRET", href: "#" },
@@ -48,7 +50,7 @@ export default function Footer() {
             </a>
           </div>
           <div class="text-gray-600 dark:text-gray-400">
-            Full Stack Web Developer
+            {t.footer.dev}
           </div>
           <div class="space-x-2 text-gray-600 dark:text-gray-400 mt-3">
             {socials.map(({ icon, href }) => (
@@ -87,7 +89,7 @@ export default function Footer() {
           <div class="text-sm">
             Copyright © {new Date().getFullYear()} Guillaume Comte
             <br />
-            All right reserved
+            {t.footer.rights}
           </div>
 
           <a
@@ -96,7 +98,7 @@ export default function Footer() {
             class="mt-3 flex items-center md:justify-end gap-1"
           >
             <img src={asset("/fresh-logo.svg")} alt="Fresh logo" class="w-6" />
-            Made with <span class="font-bold">Fresh</span>
+            {t.footer.madewith} <span class="font-bold">Fresh</span>
           </a>
         </div>
       </div>

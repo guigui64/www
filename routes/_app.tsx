@@ -1,6 +1,5 @@
 import { asset, Head } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/server.ts";
-import Footer from "../components/Footer.tsx";
 
 export default function App({ Component }: AppProps) {
   return (
@@ -35,7 +34,6 @@ export default function App({ Component }: AppProps) {
       </Head>
       <body class="text-gray-900 dark:(text-gray-50 bg-gray-900)">
         <Component />
-        <Footer />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import FileDownload from "@tabler/icons/file-download.tsx";
 import { ComponentChildren } from "preact";
+import { T } from "../state.ts";
 import Button from "./Button.tsx";
 import {
   IconFresh,
@@ -51,6 +52,7 @@ function Skill(props: SkillProps) {
 }
 
 export default function Me() {
+  const t = T.value!;
   return (
     <section
       id="about-me"
@@ -68,56 +70,33 @@ export default function Me() {
       </Button>
       <div class="grid lg:grid-cols-desktop grid-cols-1 gap-x-10 gap-y-6">
         <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 whitespace-nowrap lg:text-right">
-          About me
+          {t.titles.aboutme}
         </h1>
         <div class="space-y-2">
-          <p>
-            Bonjour! I'm a passionate Full Stack Web Developer. You can find
-            here some of my experience and skills as well as a form to contact
-            me. I am looking forward to meet you!
-          </p>
-          <p>
-            I live in Toulouse (France) with my wife and son. I love playing
-            Squash, Padel, Tennis and Basketball. I also like video games,
-            reading and watching movies and TV shows (but who doesn't?).
-          </p>
+          {t.me.intro.map((p) => <p>{p}</p>)}
         </div>
         <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
-          Education
-        </h2>
-        <ul>
-          <li>
-            <Edux
-              title="Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse"
-              date="September 2010 - September 2013"
-              text={`Master's degree in Aerospace, Aeronautical and Space Engineering
-2 years at ENSICA - 1 year at SUPAERO`}
-            />
-          </li>
-        </ul>
-        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
-          Experience
+          {t.me.education.title}
         </h2>
         <ul class="space-y-2">
-          <li>
-            <Edux
-              title="Airbus Defence and Space, Toulouse"
-              date="June 2016 - present"
-              text={`Senior Software Architect
-Satellite Simulator Web GUI - React, Typescript, Golang, ZeroMQ, Protobuf`}
-            />
-          </li>
-          <li>
-            <Edux
-              title="Atos (for the French Navy), Toulon"
-              date="September 2013 - May 2016"
-              text={`Software Developer
-Tactical Data Link - Java, Spring, Ant`}
-            />
-          </li>
+          {t.me.education.edux.map(({ title, date, text }) => (
+            <li>
+              <Edux {...{ title, date, text }} />
+            </li>
+          ))}
         </ul>
         <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
-          Skills
+          {t.me.experience.title}
+        </h2>
+        <ul class="space-y-2">
+          {t.me.experience.edux.map(({ title, date, text }) => (
+            <li>
+              <Edux {...{ title, date, text }} />
+            </li>
+          ))}
+        </ul>
+        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+          {t.me.skills.title}
         </h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
           <ul>

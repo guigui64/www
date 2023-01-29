@@ -4,20 +4,24 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/blog.tsx";
-import * as $2 from "./routes/index.tsx";
+import * as $1 from "./routes/_middleware.ts";
+import * as $2 from "./routes/blog.tsx";
+import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/ColorMode.tsx";
-import * as $$1 from "./islands/MobileHeader.tsx";
+import * as $$1 from "./islands/Language.tsx";
+import * as $$2 from "./islands/MobileHeader.tsx";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/blog.tsx": $1,
-    "./routes/index.tsx": $2,
+    "./routes/_middleware.ts": $1,
+    "./routes/blog.tsx": $2,
+    "./routes/index.tsx": $3,
   },
   islands: {
     "./islands/ColorMode.tsx": $$0,
-    "./islands/MobileHeader.tsx": $$1,
+    "./islands/Language.tsx": $$1,
+    "./islands/MobileHeader.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

@@ -1,6 +1,8 @@
 import { asset } from "$fresh/runtime.ts";
 import ColorMode from "../islands/ColorMode.tsx";
+import Language from "../islands/Language.tsx";
 import MobileHeader from "../islands/MobileHeader.tsx";
+import { State } from "../routes/_middleware.ts";
 
 type Menu = { name: string; href: string };
 export type HeaderProps = {
@@ -8,6 +10,7 @@ export type HeaderProps = {
   sticky?: boolean;
   left?: Menu[];
   right?: Menu[];
+  lang: State["lang"];
 };
 
 const MENUS = [
@@ -62,9 +65,7 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
         ))}
       </ul>
       <div class="flex gap-6 items-center">
-        <button class="hover:(text-gray-900 dark:text-gray-100) font-bold">
-          FR
-        </button>
+        <Language lang={props.lang} />
         <ColorMode />
       </div>
     </div>
