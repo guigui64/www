@@ -4,8 +4,13 @@ import OS from "@tabler/icons/brightness.tsx";
 import Sun from "@tabler/icons/sun.tsx";
 import Moon from "@tabler/icons/moon.tsx";
 
+const modes = ["os", "dark", "light"] as const;
+const angles = ["rotate-0", "rotate-[120deg]", "-rotate-[120deg]"];
+const opacities = ["opacity-100", "opacity-0", "opacity-0"];
+const icons = [OS, Moon, Sun];
+
 export default function ColorMode() {
-  const state = useSignal("os");
+  const state = useSignal<typeof modes[number]>("os");
 
   function detectMode() {
     if (
@@ -23,9 +28,7 @@ export default function ColorMode() {
   }
 
   function toggle() {
-    state.value = state.value === "os"
-      ? "dark"
-      : (state.value === "dark" ? "light" : "os");
+    state.value = modes[(modes.indexOf(state.value) + 1) % modes.length];
     if (state.value === "os") {
       localStorage.removeItem("colorMode");
     } else {
@@ -46,12 +49,34 @@ export default function ColorMode() {
 
   return (
     <div
-      class="cursor-pointer hover:(text-gray-700 dark:text-gray-100)"
+      class="relative cursor-pointer hover:(text-gray-700 dark:text-gray-100) w-6 h-6"
       onClick={toggle}
     >
-      {state.value === "os"
-        ? <OS />
-        : (state.value === "dark" ? <Moon /> : <Sun />)}
+      {icons.map((Icon, i) => {
+        /*
+          Compute pos in opacities/angles that way:
+              state		icon		i		indexOf		idx-i		(idx-i+L)mod L
+              os		os			0		0			0			0
+              os		dark		1		0			-1			2
+              os		light		2		0			-2			1
+              dark		os			0		1			1			1
+              dark		dark		1		1			0			0
+              dark		light		2		1			-1			2
+              light		os			0		2			2			2
+              light		dark		1		2			1			1
+              light		light		2		2			0			0
+        */
+        const pos = (modes.indexOf(state.value) - i + modes.length) %
+          modes.length;
+        return (
+          <div
+            class={"absolute top-0 pb-1 transition ease-linear duration-500 origin-bottom " +
+              `${opacities[pos]} ${angles[pos]}`}
+          >
+            <Icon />
+          </div>
+        );
+      })}
     </div>
   );
 }
