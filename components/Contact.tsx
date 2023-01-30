@@ -6,11 +6,16 @@ export type ContactForm = {
   message: string;
 };
 
+const NTFY_TOPIC = Deno.env.get("NTFY_TOPIC");
+if (NTFY_TOPIC === undefined) {
+  throw Error("NTFY_TOPIC environment variable must be set");
+}
+
 export function handle(searchParams: URLSearchParams) {
   if (searchParams.has("email") && searchParams.has("message")) {
     const email = searchParams.get("email")!;
     const message = searchParams.get("message")!;
-    fetch(`https://ntfy.sh/${Deno.env.get("NTFY_TOPIC")}`, {
+    fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
       method: "POST",
       body: message,
       headers: {
@@ -50,7 +55,7 @@ export default function Contact(props: ContactProps) {
           <div class="space-y-1">
             <label for="email" class="uppercase text-sm">Email</label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               placeholder="email"
