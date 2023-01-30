@@ -8,7 +8,7 @@ import Footer from "../components/Footer.tsx";
 import Header from "../components/Header.tsx";
 import Hero from "../components/Hero.tsx";
 import Me from "../components/Me.tsx";
-import Project from "../components/Project.tsx";
+import Project from "../islands/Project.tsx";
 import { Translation } from "../i18n/types.ts";
 import { T } from "../state.ts";
 import { State } from "./_middleware.ts";

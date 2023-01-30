@@ -7,7 +7,10 @@ type ProjectProps = {
 
 export default function Project(props: ProjectProps) {
   return (
-    <div class="space-y-2 rounded-md px-3 py-2 border bg-gray-100 hover:(bg-gradient-to-r from-cyan-500 to-teal-500) border-gray-400 dark:(bg-gray-800 hover:(from-cyan-500 to-teal-500) border-gray-600) group">
+    <div
+      class="cursor-pointer space-y-2 rounded-md px-3 py-2 border bg-gray-100 hover:(bg-gradient-to-r from-cyan-500 to-teal-500) border-gray-400 dark:(bg-gray-800 hover:(from-cyan-500 to-teal-500) border-gray-600) group"
+      onClick={() => open(props.href, "_blank")}
+    >
       <h2 class="text-center uppercase text-lg font-bold group-hover:text-white">
         <a href={props.href} target="_blank" class="hover:underline">
           {props.title}
@@ -23,6 +26,7 @@ export default function Project(props: ProjectProps) {
               class="text-sm uppercase text-gray-700 dark:text-gray-200 group-hover:(text-gray-100 hover:text-gray-50) hover:underline"
               href={props.github}
               target="_blank"
+              onClick={(e) => e.stopPropagation()}
             >
               Github
             </a>
