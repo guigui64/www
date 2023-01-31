@@ -4,6 +4,7 @@
 		"dev": "Développeur Web Full Stack"
 	},
 	"titles": {
+		"home": "Accueil",
 		"aboutme": "À propos",
 		"projects": "Projets",
 		"contact": "Contact"
@@ -11,7 +12,7 @@
 	"me": {
 		"intro": [
 			"Bonjour! Je suis un développeur Web Full Stack passionné. Vous trouverez ici mes différentes expériences et compétences ainsi qu'un formulaire pour me contacter. J'ai hâte de vous rencontrer !",
-			"Je vis à Toulouse avec ma femme et mon fils. J'adore jouer au Squash, au Padel, au Tennis et au Basketball. J'aime aussi lire des livres, regarder des films et des séries et jouer aux jeux vidéos (en même temps, qui n'aime pas ça ? :p)."
+			"Je vis à Toulouse avec ma femme et mon fils. J'adore jouer au Squash, au Padel, au Tennis et au Basketball. J'aime aussi lire des livres, regarder des films et des séries et jouer aux jeux vidéos."
 		],
 		"education": {
 			"title": "Formation",
@@ -46,8 +47,8 @@
 		"please": "Merci de remplir ce formulaire pour me contacter.",
 		"send": "Envoyer",
 		"sent": "Envoyé",
-		"thanks": "Merci d'avoir pris contact, je reviendrais vers vous dès que possible ! Si vous souhaitez envoyer un nouveau message, merci de cliquer",
-		"here": "ici"
+		"thanks": "Merci d'avoir pris contact, je reviendrai vers vous dès que possible !",
+		"back": "Retour."
 	},
 	"footer": {
 		"dev": "Développeur Web Full Stack",
@@ -55,5 +56,8 @@
 		"legal": "Légal",
 		"madewith": "Créé avec",
 		"rights": "Tous droits réservés"
+	},
+	"blog": {
+		"wip": "En construction..."
 	}
 }

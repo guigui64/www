@@ -10,7 +10,7 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
     <div
       class={`block sm:hidden text-gray-700 dark:text-gray-300 text-lg font-bold relative`}
     >
-      <div class="px-8 h-12 flex flex-row gap-6 justify-between items-center">
+      <div class="px-4 h-12 flex flex-row gap-6 justify-between items-center">
         <div>
           {props.active !== "/" &&
             (
@@ -79,25 +79,48 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
       />
       <div class="absolute top-12 w-full bg-gray-100 dark:bg-gray-700">
         <div
-          class={`flex flex-col gap-2 items-center justify-center overflow-hidden transition-all duration-300 ${
+          class={`divide-y-1 divide-gray-300 dark:divide-gray-600 overflow-hidden transition-all duration-300 ${
             checked.value ? "max-h-64 my-4" : "max-h-0"
           }`}
         >
-          {[...(props.left ?? []), ...(props.right ?? [])].map((menu) => (
-            <div class="text-center">
-              <a
-                href={menu.href}
-                class="hover:(text-gray-900 dark:text-gray-100) py-1 border-gray-500 dark:border-gray-300"
-                onClick={() => {
-                  if (menu.href.startsWith("#")) checked.value = false;
-                }}
-              >
-                {menu.name}
-              </a>
+          {props.left && (
+            <div class="flex flex-col items-center justify-center w-full py-2 first:pt-0 last:pb-0">
+              {props.left.map((menu) => (
+                <div class="text-center">
+                  <a
+                    href={menu.href}
+                    class={"hover:(text-gray-900 dark:text-gray-100) px-2 border-gray-500 dark:border-gray-300" +
+                      (menu.href === props.active ? " border-l-4" : "")}
+                    onClick={() => {
+                      if (menu.href.startsWith("#")) checked.value = false;
+                    }}
+                  >
+                    {menu.name}
+                  </a>
+                </div>
+              ))}
             </div>
-          ))}
-          <Language lang={props.lang} />
-          <ColorMode />
+          )}
+          <div class="flex flex-col items-center justify-center w-full py-2 first:pt-0 last:pb-0">
+            {(props.right ?? []).map((menu) => (
+              <div class="text-center">
+                <a
+                  href={menu.href}
+                  class={"hover:(text-gray-900 dark:text-gray-100) px-2 border-gray-500 dark:border-gray-300" +
+                    (menu.href === props.active ? " border-l-4" : "")}
+                  onClick={() => {
+                    if (menu.href.startsWith("#")) checked.value = false;
+                  }}
+                >
+                  {menu.name}
+                </a>
+              </div>
+            ))}
+          </div>
+          <div class="flex flex-row gap-2 items-center justify-center w-full py-2 first:pt-0 last:pb-0">
+            <Language lang={props.lang} />
+            <ColorMode />
+          </div>
         </div>
       </div>
     </div>

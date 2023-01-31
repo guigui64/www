@@ -49,7 +49,7 @@ export default function ColorMode() {
 
   return (
     <div
-      class="relative cursor-pointer hover:(text-gray-700 dark:text-gray-100) w-6 h-6"
+      class="relative cursor-pointer hover:(text-gray-700 dark:text-gray-100) w-6 sm:w-7 h-6"
       onClick={toggle}
     >
       {icons.map((Icon, i) => {

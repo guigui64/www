@@ -3,6 +3,7 @@ import ColorMode from "../islands/ColorMode.tsx";
 import Language from "../islands/Language.tsx";
 import MobileHeader from "../islands/MobileHeader.tsx";
 import { State } from "../routes/_middleware.ts";
+import { T } from "../state.ts";
 
 type Menu = { name: string; href: string };
 export type HeaderProps = {
@@ -13,13 +14,9 @@ export type HeaderProps = {
   lang: State["lang"];
 };
 
-const MENUS = [
-  { name: "Blog", href: "/blog" },
-];
-
 function LargeHeader(props: Omit<HeaderProps, "sticky">) {
   return (
-    <div class="hidden sm:flex px-8 flex-row flex-wrap gap-6 text-gray-700 dark:text-gray-300 text-md font-bold h-14">
+    <div class="hidden sm:flex flex-row flex-wrap gap-6 text-gray-700 dark:text-gray-300 text-md font-bold h-14 px-4">
       <ul class="flex-1 flex items-center gap-6">
         {props.active !== "/" &&
           (
@@ -75,7 +72,11 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
 export default function Header(
   props: HeaderProps,
 ) {
-  props.right = props.right ?? MENUS;
+  const menus = [
+    { name: T.value!.titles.home, href: "/" },
+    { name: "Blog", href: "/blog" },
+  ];
+  props.right = props.right ?? menus;
   return (
     <header
       class={`w-full bg-gray-100 dark:bg-gray-700 ${

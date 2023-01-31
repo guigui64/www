@@ -81,7 +81,7 @@ export default function Me() {
           {t.titles.aboutme}
         </h1>
         <div class="space-y-2">
-          {t.me.intro.map((p) => <p>{p}</p>)}
+          {t.me.intro.map((p) => <p class="text-justify">{p}</p>)}
         </div>
         <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
           {t.me.education.title}

@@ -1,9 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Contact, {
-  ContactForm,
-  handle as handleContactForm,
-} from "../components/Contact.tsx";
+import Contact from "../components/Contact.tsx";
 import Footer from "../components/Footer.tsx";
 import Header from "../components/Header.tsx";
 import Hero from "../components/Hero.tsx";
@@ -14,15 +11,13 @@ import { T } from "../state.ts";
 import { State } from "./_middleware.ts";
 
 type Data = {
-  contactForm: ContactForm | null;
   lang: State["lang"];
   t: Translation;
 };
 
 export const handler: Handlers<Data, State> = {
-  GET(req, ctx) {
+  GET(_req, ctx) {
     return ctx.render({
-      contactForm: handleContactForm(new URL(req.url).searchParams),
       lang: ctx.state.lang,
       t: ctx.state.t,
     });
@@ -96,11 +91,13 @@ export default function Home(props: PageProps<Data>) {
       </Head>
       <Header active="/" left={LINKS} lang={props.data.lang} />
       <Hero />
-      <main class="py-10 px-2 space-y-10 max-w-screen-lg mx-auto">
-        <Me />
-        <Projects />
-        <Recommendations />
-        <Contact data={props.data.contactForm} />
+      <main class="pt-10 pb-[25.5rem] md:pb-[13.5rem] px-2 max-w-screen-lg mx-auto">
+        <div class="space-y-10">
+          <Me />
+          <Projects />
+          <Recommendations />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </>

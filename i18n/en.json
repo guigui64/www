@@ -4,6 +4,7 @@
 		"dev": "Full Stack Web Developer"
 	},
 	"titles": {
+		"home": "Home",
 		"aboutme": "About Me",
 		"projects": "Projects",
 		"contact": "Contact"
@@ -46,8 +47,8 @@
 		"please": "Want to get in touch? Please fill out this form.",
 		"send": "Send",
 		"sent": "Sent",
-		"thanks": "Thank you for reaching out, I'll get back to you ASAP! If you want to send another message, please click",
-		"here": "here"
+		"thanks": "Thank you for reaching out, I'll get back to you ASAP!",
+		"back": "Back."
 	},
 	"footer": {
 		"dev": "Full Stack Web Developer",
@@ -55,5 +56,8 @@
 		"legal": "Legal",
 		"madewith": "Made with",
 		"rights": "All rights reserved"
+	},
+	"blog": {
+		"wip": "I guess I need to blog..."
 	}
 }
