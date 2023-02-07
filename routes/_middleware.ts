@@ -11,11 +11,12 @@ export type State = {
 
 export async function handler(
   req: Request,
-  ctx: MiddlewareHandlerContext<State>,
+  ctx: MiddlewareHandlerContext<State>
 ) {
   let setLangCookie = true;
   if (
-    req.headers.has("cookie") && req.headers.get("cookie")!.includes("lang")
+    req.headers.has("cookie") &&
+    req.headers.get("cookie")!.includes("lang")
   ) {
     ctx.state.lang = req.headers.get("cookie")!.includes("lang=fr")
       ? "fr"

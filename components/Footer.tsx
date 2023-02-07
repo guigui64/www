@@ -51,24 +51,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer class="absolute bottom-0 bg-gray-100 dark:bg-gray-700 w-full h-96 md:h-48">
-      <div class="flex flex-col md:flex-row max-w-screen-md mx-auto gap-8 md:gap-16 px-2 py-8 text-sm">
+    <footer class="absolute bottom-0 h-96 w-full bg-gray-100 dark:bg-gray-700 md:h-48">
+      <div class="mx-auto flex max-w-screen-md flex-col gap-8 px-2 py-8 text-sm md:flex-row md:gap-16">
         <div class="flex-1">
           <div class="flex items-center">
             <a
-              class="font-bold text-2xl text-gray-700 dark:text-gray-300"
+              class="text-2xl font-bold text-gray-700 dark:text-gray-300"
               href="/"
             >
               Guillaume Comte
             </a>
           </div>
-          <div class="text-gray-600 dark:text-gray-400">
-            {t.footer.dev}
-          </div>
-          <div class="space-x-2 text-gray-600 dark:text-gray-400 mt-3">
+          <div class="text-gray-600 dark:text-gray-400">{t.footer.dev}</div>
+          <div class="mt-3 space-x-2 text-gray-600 dark:text-gray-400">
             {socials.map(({ icon, href, ariaLabel }) => (
               <a
-                class="inline-block hover:(text-gray-700 dark:text-gray-300)"
+                class="hover:(text-gray-700 dark:text-gray-300) inline-block"
                 href={href}
                 aria-label={ariaLabel}
                 target="_blank"
@@ -80,15 +78,15 @@ export default function Footer() {
         </div>
 
         {menus.map((item) => (
-          <div class="flex flex-row md:flex-col gap-4" key={item.title}>
+          <div class="flex flex-row gap-4 md:flex-col" key={item.title}>
             <div class="font-bold text-gray-700 dark:text-gray-300">
               {item.title}
             </div>
-            <ul class="flex flex-row md:flex-col gap-4">
+            <ul class="flex flex-row gap-4 md:flex-col">
               {item.children.map((child) => (
                 <li class="" key={child.name}>
                   <a
-                    class="text-gray-600 dark:text-gray-400 hover:(text-gray-700 dark:text-gray-300)"
+                    class="hover:(text-gray-700 dark:text-gray-300) text-gray-600 dark:text-gray-400"
                     href={child.href}
                   >
                     {child.name}
@@ -99,7 +97,7 @@ export default function Footer() {
           </div>
         ))}
 
-        <div class="text-gray-600 dark:text-gray-400 space-y-2 md:text-right">
+        <div class="space-y-2 text-gray-600 dark:text-gray-400 md:text-right">
           <div class="text-sm">
             Copyright © {new Date().getFullYear()} Guillaume Comte
             <br />
@@ -109,12 +107,12 @@ export default function Footer() {
           <a
             href="https://fresh.deno.dev"
             target="_blank"
-            class="mt-3 flex items-center md:justify-end gap-1"
+            class="mt-3 flex items-center gap-1 md:justify-end"
           >
             <img
               src={asset("/fresh-logo.svg")}
               alt="Fresh logo"
-              class="w-6 h-6"
+              class="h-6 w-6"
             />
             {t.footer.madewith} <span class="font-bold">Fresh</span>
           </a>

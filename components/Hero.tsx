@@ -6,31 +6,29 @@ import { T } from "../state.ts";
 export default function Hero() {
   const t = T.value!;
   return (
-    <div class="sm:min-h-screen min-w-screen bg-gray-100 dark:bg-gray-700 flex flex-col justify-between items-center">
+    <div class="min-w-screen flex flex-col items-center justify-between bg-gray-100 dark:bg-gray-700 sm:min-h-screen">
       <div class=""></div>
-      <div class="flex flex-col md:flex-row gap-y-5 gap-x-10 items-center mt-12 mb-4 sm:(mt-14 mb-14)">
+      <div class="sm:(mt-14 mb-14) mt-12 mb-4 flex flex-col items-center gap-y-5 gap-x-10 md:flex-row">
         <img
-          class="rounded-full w-24 h-24 sm:(w-52 h-52) animate__animated animate__fadeIn"
+          class="sm:(w-52 h-52) animate__animated animate__fadeIn h-24 w-24 rounded-full"
           src={asset("avatar-big.webp")}
           alt="avatar"
         />
         <div class="space-y-2 text-center md:text-left">
-          <h1 class="text-2xl sm:text-4xl font-bold animate__animated animate__fadeInUp animate__delay-1s">
+          <h1 class="animate__animated animate__fadeInUp animate__delay-1s text-2xl font-bold sm:text-4xl">
             <Balancer>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 dark:(from-cyan-400 to-teal-400)">
+              <span class="dark:(from-cyan-400 to-teal-400) bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
                 {t.hero.hello}
               </span>{" "}
-              <span class="animate-wave inline-block">
-                👋
-              </span>
+              <span class="animate-wave inline-block">👋</span>
             </Balancer>
           </h1>
-          <h2 class="text-md sm:text-xl font-medium text-cyan-700 dark:text-cyan-200 animate__animated animate__fadeInUp animate__delay-2s">
+          <h2 class="text-md animate__animated animate__fadeInUp animate__delay-2s font-medium text-cyan-700 dark:text-cyan-200 sm:text-xl">
             {t.hero.dev}
           </h2>
         </div>
       </div>
-      <div class="hidden sm:block pb-2 animate__animated animate__fadeIn animate__delay-5s">
+      <div class="animate__animated animate__fadeIn animate__delay-5s hidden pb-2 sm:block">
         <div class="motion-safe:animate-bounce">
           <ArrowDown size={16} />
         </div>

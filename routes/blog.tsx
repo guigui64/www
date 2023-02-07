@@ -33,8 +33,8 @@ export default function Blog(props: PageProps<Data>) {
         />
       </Head>
       <Header active="/blog" lang={props.data.lang} />
-      <main class="mt-12 pt-10 pb-[25.5rem] md:pb-[13.5rem] px-2 max-w-screen-lg mx-auto">
-        <div class="flex gap-1 justify-center">
+      <main class="mx-auto mt-12 max-w-screen-lg px-2 pt-10 pb-[25.5rem] md:pb-[13.5rem]">
+        <div class="flex justify-center gap-1">
           <TrafficCone />
           <p>{props.data.t.blog.wip}</p>
         </div>

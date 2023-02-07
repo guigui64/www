@@ -1,63 +1,63 @@
 {
-	"hero": {
-		"hello": "Hi, I'm Guillaume",
-		"dev": "Full Stack Web Developer"
-	},
-	"titles": {
-		"home": "Home",
-		"aboutme": "About Me",
-		"projects": "Projects",
-		"contact": "Contact"
-	},
-	"me": {
-		"intro": [
-			"Bonjour! I'm a passionate Full Stack Web Developer. You can find here some of my experience and skills as well as a form to contact me. I am looking forward to meet you!",
-			"I live in Toulouse (France) with my wife and son. I love playing Squash, Padel, Tennis and Basketball. I also like reading books, watching movies and TV shows and playing video games (but who doesn't? :p)."
-		],
-		"education": {
-			"title": "Education",
-			"edux": [
-				{
-					"title": "Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse",
-					"date": "September 2010 - September 2013",
-					"text": "Master's degree in Aerospace, Aeronautical and Space Engineering\n2 years at ENSICA - 1 year at SUPAERO"
-				}
-			]
-		},
-		"experience": {
-			"title": "Experience",
-			"edux": [
-				{
-					"title": "Airbus Defence and Space, Toulouse",
-					"date": "June 2016 - present",
-					"text": "Senior Software Architect\nSatellite Simulator Web GUI - React, Typescript, Golang, ZeroMQ, Protobuf"
-				},
-				{
-					"title": "Atos (for the French Navy), Toulon",
-					"date": "September 2013 - May 2016",
-					"text": "Software Developer\nTactical Data Link - Java, Spring, Ant"
-				}
-			]
-		},
-		"skills": {
-			"title": "Skills"
-		}
-	},
-	"contact": {
-		"please": "Want to get in touch? Please fill out this form.",
-		"send": "Send",
-		"sent": "Sent",
-		"thanks": "Thank you for reaching out, I'll get back to you ASAP!",
-		"back": "Back."
-	},
-	"footer": {
-		"dev": "Full Stack Web Developer",
-		"links": "Links",
-		"legal": "Legal",
-		"madewith": "Made with",
-		"rights": "All rights reserved"
-	},
-	"blog": {
-		"wip": "I guess I need to blog..."
-	}
+  "hero": {
+    "hello": "Hi, I'm Guillaume",
+    "dev": "Full Stack Web Developer"
+  },
+  "titles": {
+    "home": "Home",
+    "aboutme": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "me": {
+    "intro": [
+      "Bonjour! I'm a passionate Full Stack Web Developer. You can find here some of my experience and skills as well as a form to contact me. I am looking forward to meet you!",
+      "I live in Toulouse (France) with my wife and son. I love playing Squash, Padel, Tennis and Basketball. I also like reading books, watching movies and TV shows and playing video games (but who doesn't? :p)."
+    ],
+    "education": {
+      "title": "Education",
+      "edux": [
+        {
+          "title": "Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse",
+          "date": "September 2010 - September 2013",
+          "text": "Master's degree in Aerospace, Aeronautical and Space Engineering\n2 years at ENSICA - 1 year at SUPAERO"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "edux": [
+        {
+          "title": "Airbus Defence and Space, Toulouse",
+          "date": "June 2016 - present",
+          "text": "Senior Software Architect\nSatellite Simulator Web GUI - React, Typescript, Golang, ZeroMQ, Protobuf"
+        },
+        {
+          "title": "Atos (for the French Navy), Toulon",
+          "date": "September 2013 - May 2016",
+          "text": "Software Developer\nTactical Data Link - Java, Spring, Ant"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills"
+    }
+  },
+  "contact": {
+    "please": "Want to get in touch? Please fill out this form.",
+    "send": "Send",
+    "sent": "Sent",
+    "thanks": "Thank you for reaching out, I'll get back to you ASAP!",
+    "back": "Back."
+  },
+  "footer": {
+    "dev": "Full Stack Web Developer",
+    "links": "Links",
+    "legal": "Legal",
+    "madewith": "Made with",
+    "rights": "All rights reserved"
+  },
+  "blog": {
+    "wip": "I guess I need to blog..."
+  }
 }

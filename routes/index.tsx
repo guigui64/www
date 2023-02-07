@@ -28,12 +28,12 @@ function Projects() {
   return (
     <section
       id="projects"
-      class="scroll-mt-16 grid grid-cols-1 lg:grid-cols-desktop gap-x-10 gap-y-4"
+      class="lg:grid-cols-desktop grid scroll-mt-16 grid-cols-1 gap-x-10 gap-y-4"
     >
-      <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+      <h1 class="text-3xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
         {T.value!.titles.projects}
       </h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Project
           title="guillaumecomte.deno.dev"
           href="https://guillaumecomte.deno.dev"
@@ -91,7 +91,7 @@ export default function Home(props: PageProps<Data>) {
       </Head>
       <Header active="/" left={LINKS} lang={props.data.lang} />
       <Hero />
-      <main class="pt-10 pb-[25.5rem] md:pb-[13.5rem] px-2 max-w-screen-lg mx-auto">
+      <main class="mx-auto max-w-screen-lg px-2 pt-10 pb-[25.5rem] md:pb-[13.5rem]">
         <div class="space-y-10">
           <Me />
           <Projects />

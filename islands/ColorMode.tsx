@@ -10,7 +10,7 @@ const opacities = ["opacity-100", "opacity-0", "opacity-0"];
 const icons = [OS, Moon, Sun];
 
 export default function ColorMode() {
-  const state = useSignal<typeof modes[number]>("os");
+  const state = useSignal<(typeof modes)[number]>("os");
 
   function detectMode() {
     if (
@@ -49,7 +49,7 @@ export default function ColorMode() {
 
   return (
     <div
-      class="relative cursor-pointer hover:(text-gray-700 dark:text-gray-100) w-6 sm:w-7 h-6"
+      class="hover:(text-gray-700 dark:text-gray-100) relative h-6 w-6 cursor-pointer sm:w-7"
       onClick={toggle}
     >
       {icons.map((Icon, i) => {
@@ -66,12 +66,14 @@ export default function ColorMode() {
               light		dark		1		2			1			1
               light		light		2		2			0			0
         */
-        const pos = (modes.indexOf(state.value) - i + modes.length) %
-          modes.length;
+        const pos =
+          (modes.indexOf(state.value) - i + modes.length) % modes.length;
         return (
           <div
-            class={"absolute top-0 pb-1 transition ease-linear duration-500 origin-bottom " +
-              `${opacities[pos]} ${angles[pos]}`}
+            class={
+              "absolute top-0 origin-bottom pb-1 transition duration-500 ease-linear " +
+              `${opacities[pos]} ${angles[pos]}`
+            }
           >
             <Icon />
           </div>

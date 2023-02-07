@@ -1,63 +1,63 @@
 {
-	"hero": {
-		"hello": "Bonjour, je suis Guillaume",
-		"dev": "Développeur Web Full Stack"
-	},
-	"titles": {
-		"home": "Accueil",
-		"aboutme": "À propos",
-		"projects": "Projets",
-		"contact": "Contact"
-	},
-	"me": {
-		"intro": [
-			"Bonjour! Je suis un développeur Web Full Stack passionné. Vous trouverez ici mes différentes expériences et compétences ainsi qu'un formulaire pour me contacter. J'ai hâte de vous rencontrer !",
-			"Je vis à Toulouse avec ma femme et mon fils. J'adore jouer au Squash, au Padel, au Tennis et au Basketball. J'aime aussi lire des livres, regarder des films et des séries et jouer aux jeux vidéos."
-		],
-		"education": {
-			"title": "Formation",
-			"edux": [
-				{
-					"title": "Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse",
-					"date": "Septembre 2010 - Septembre 2013",
-					"text": "Diplôme d'Ingénieur en Aéronautique et Spatial\n2 ans à l'ENSICA - 1 an à SUPAERO"
-				}
-			]
-		},
-		"experience": {
-			"title": "Expérience",
-			"edux": [
-				{
-					"title": "Airbus Defence and Space, Toulouse",
-					"date": "Juin 2016 - présent",
-					"text": "Architecte Logiciel Sénior\nIHM Web pour simulateur de satellite - React, Typescript, Golang, ZeroMQ, Protobuf"
-				},
-				{
-					"title": "Atos (pour la Marine Nationale), Toulon",
-					"date": "Septembre 2013 - Mai 2016",
-					"text": "Développeur Logiciel\nTactical Data Link - Java, Spring, Ant"
-				}
-			]
-		},
-		"skills": {
-			"title": "Compétences"
-		}
-	},
-	"contact": {
-		"please": "Merci de remplir ce formulaire pour me contacter.",
-		"send": "Envoyer",
-		"sent": "Envoyé",
-		"thanks": "Merci d'avoir pris contact, je reviendrai vers vous dès que possible !",
-		"back": "Retour."
-	},
-	"footer": {
-		"dev": "Développeur Web Full Stack",
-		"links": "Liens",
-		"legal": "Légal",
-		"madewith": "Créé avec",
-		"rights": "Tous droits réservés"
-	},
-	"blog": {
-		"wip": "En construction..."
-	}
+  "hero": {
+    "hello": "Bonjour, je suis Guillaume",
+    "dev": "Développeur Web Full Stack"
+  },
+  "titles": {
+    "home": "Accueil",
+    "aboutme": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "me": {
+    "intro": [
+      "Bonjour! Je suis un développeur Web Full Stack passionné. Vous trouverez ici mes différentes expériences et compétences ainsi qu'un formulaire pour me contacter. J'ai hâte de vous rencontrer !",
+      "Je vis à Toulouse avec ma femme et mon fils. J'adore jouer au Squash, au Padel, au Tennis et au Basketball. J'aime aussi lire des livres, regarder des films et des séries et jouer aux jeux vidéos."
+    ],
+    "education": {
+      "title": "Formation",
+      "edux": [
+        {
+          "title": "Institut Supérieur de l'Aéronautique et de l'Espace, Toulouse",
+          "date": "Septembre 2010 - Septembre 2013",
+          "text": "Diplôme d'Ingénieur en Aéronautique et Spatial\n2 ans à l'ENSICA - 1 an à SUPAERO"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Expérience",
+      "edux": [
+        {
+          "title": "Airbus Defence and Space, Toulouse",
+          "date": "Juin 2016 - présent",
+          "text": "Architecte Logiciel Sénior\nIHM Web pour simulateur de satellite - React, Typescript, Golang, ZeroMQ, Protobuf"
+        },
+        {
+          "title": "Atos (pour la Marine Nationale), Toulon",
+          "date": "Septembre 2013 - Mai 2016",
+          "text": "Développeur Logiciel\nTactical Data Link - Java, Spring, Ant"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Compétences"
+    }
+  },
+  "contact": {
+    "please": "Merci de remplir ce formulaire pour me contacter.",
+    "send": "Envoyer",
+    "sent": "Envoyé",
+    "thanks": "Merci d'avoir pris contact, je reviendrai vers vous dès que possible !",
+    "back": "Retour."
+  },
+  "footer": {
+    "dev": "Développeur Web Full Stack",
+    "links": "Liens",
+    "legal": "Légal",
+    "madewith": "Créé avec",
+    "rights": "Tous droits réservés"
+  },
+  "blog": {
+    "wip": "En construction..."
+  }
 }

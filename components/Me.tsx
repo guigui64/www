@@ -22,18 +22,16 @@ type EduxProps = {
 function Edux(props: EduxProps) {
   return (
     <div>
-      <div class="text-lg flex flex-col md:justify-between md:flex-row">
-        <p class="md:order-2 text-gray-600 dark:text-gray-400 md:text-right">
+      <div class="flex flex-col text-lg md:flex-row md:justify-between">
+        <p class="text-gray-600 dark:text-gray-400 md:order-2 md:text-right">
           {props.date}
         </p>
         <h3 class="font-medium md:order-1">
-          <Balancer>
-            {props.title}
-          </Balancer>
+          <Balancer>{props.title}</Balancer>
         </h3>
       </div>
       {props.text && (
-        <p class="text-gray-600 dark:text-gray-400 whitespace-pre-wrap">
+        <p class="whitespace-pre-wrap text-gray-600 dark:text-gray-400">
           {props.text}
         </p>
       )}
@@ -48,7 +46,7 @@ type SkillProps = {
 };
 function Skill(props: SkillProps) {
   return (
-    <div class="text-lg font-medium flex gap-1 justify-between items-center">
+    <div class="flex items-center justify-between gap-1 text-lg font-medium">
       {props.icon}
       <span class="flex-1">{props.title}</span>
       <span class="text-gray-600 dark:text-gray-400">{props.level}</span>
@@ -59,12 +57,8 @@ function Skill(props: SkillProps) {
 export default function Me() {
   const t = T.value!;
   return (
-    <section
-      id="about-me"
-      class="scroll-mt-16 relative"
-    >
-      {
-        /* TODO create CV and show button
+    <section id="about-me" class="relative scroll-mt-16">
+      {/* TODO create CV and show button
       <Button class="absolute top-4 right-0">
         <a
           class="flex gap-1"
@@ -74,16 +68,17 @@ export default function Me() {
           <FileDownload />Resume
         </a>
       </Button>
-      */
-      }
-      <div class="grid lg:grid-cols-desktop grid-cols-1 gap-x-10 gap-y-6">
-        <h1 class="text-3xl uppercase font-bold text-gray-600 dark:text-gray-400 whitespace-nowrap lg:text-right">
+      */}
+      <div class="lg:grid-cols-desktop grid grid-cols-1 gap-x-10 gap-y-6">
+        <h1 class="whitespace-nowrap text-3xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
           {t.titles.aboutme}
         </h1>
         <div class="space-y-2">
-          {t.me.intro.map((p) => <p class="text-justify">{p}</p>)}
+          {t.me.intro.map((p) => (
+            <p class="text-justify">{p}</p>
+          ))}
         </div>
-        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+        <h2 class="text-xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
           {t.me.education.title}
         </h2>
         <ul class="space-y-2">
@@ -93,7 +88,7 @@ export default function Me() {
             </li>
           ))}
         </ul>
-        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+        <h2 class="text-xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
           {t.me.experience.title}
         </h2>
         <ul class="space-y-2">
@@ -103,33 +98,21 @@ export default function Me() {
             </li>
           ))}
         </ul>
-        <h2 class="text-xl uppercase font-bold text-gray-600 dark:text-gray-400 lg:text-right">
+        <h2 class="text-xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
           {t.me.skills.title}
         </h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
           <ul>
             <li>
               <Skill icon={IconReact} title="React" level={10} />
-              <Skill
-                icon={IconFresh}
-                title="Fresh"
-                level={10}
-              />
+              <Skill icon={IconFresh} title="Fresh" level={10} />
               <Skill icon={IconSvelte} title="Svelte" level={7} />
             </li>
           </ul>
           <ul>
             <li>
-              <Skill
-                icon={IconTypescript}
-                title="Typescript"
-                level={10}
-              />
-              <Skill
-                icon={IconGolang}
-                title="Golang"
-                level={9}
-              />
+              <Skill icon={IconTypescript} title="Typescript" level={10} />
+              <Skill icon={IconGolang} title="Golang" level={9} />
               <Skill icon={IconReact} title="Python" level={7} />
             </li>
           </ul>

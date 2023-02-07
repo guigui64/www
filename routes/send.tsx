@@ -25,13 +25,13 @@ export function handle(searchParams: URLSearchParams) {
       method: "POST",
       body: message,
       headers: {
-        "Title": `New message from ${email}`,
+        Title: `New message from ${email}`,
       },
     });
-    return ({
+    return {
       email,
       message,
-    });
+    };
   }
   throw Error("No email or message provided");
 }
@@ -64,7 +64,7 @@ export default function Blog(props: PageProps<Data>) {
         />
       </Head>
       <Header active="/send" lang={props.data.lang} />
-      <main class="mt-12 pt-10 pb-[25.5rem] md:pb-[13.5rem] px-2 max-w-screen-lg mx-auto">
+      <main class="mx-auto mt-12 max-w-screen-lg px-2 pt-10 pb-[25.5rem] md:pb-[13.5rem]">
         <div class="space-y-6">
           <p>
             {props.data.t.contact.thanks}{" "}
@@ -72,13 +72,11 @@ export default function Blog(props: PageProps<Data>) {
               {props.data.t.contact.back}
             </a>
           </p>
-          <div class="border-l-2 ml-4 pl-4">
+          <div class="ml-4 border-l-2 pl-4">
             <h1 class="text-sm uppercase">Email:</h1>
-            <p class="italic text-gray-500">
-              {props.data.contactForm.email}
-            </p>
+            <p class="italic text-gray-500">{props.data.contactForm.email}</p>
             <h1 class="mt-4 text-sm uppercase">Message:</h1>
-            <p class="italic text-gray-500 whitespace-pre-wrap">
+            <p class="whitespace-pre-wrap italic text-gray-500">
               {props.data.contactForm.message}
             </p>
           </div>

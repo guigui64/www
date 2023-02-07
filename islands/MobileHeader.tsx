@@ -8,36 +8,32 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
   const checked = useSignal(false);
   return (
     <div
-      class={`block sm:hidden text-gray-700 dark:text-gray-300 text-lg font-bold relative`}
+      class={`relative block text-lg font-bold text-gray-700 dark:text-gray-300 sm:hidden`}
     >
-      <div class="px-4 h-12 flex flex-row gap-6 justify-between items-center">
+      <div class="flex h-12 flex-row items-center justify-between gap-6 px-4">
         <div>
-          {props.active !== "/" &&
-            (
-              <div class="flex gap-2 items-center">
-                <img
-                  class="rounded-full w-8 h-8"
-                  src={asset("avatar-small.webp")}
-                  alt="avatar"
-                />
-                <a
-                  href="/"
-                  class="hover:(text-gray-900 dark:text-gray-100)"
-                >
-                  Guillaume Comte
-                </a>
-              </div>
-            )}
+          {props.active !== "/" && (
+            <div class="flex items-center gap-2">
+              <img
+                class="h-8 w-8 rounded-full"
+                src={asset("avatar-small.webp")}
+                alt="avatar"
+              />
+              <a href="/" class="hover:(text-gray-900 dark:text-gray-100)">
+                Guillaume Comte
+              </a>
+            </div>
+          )}
         </div>
         <div class="flex min-h-screen items-center justify-center">
           <div
             class="group relative my-2 mx-auto h-5 w-7 cursor-pointer"
-            onClick={() => checked.value = !checked.value}
+            onClick={() => (checked.value = !checked.value)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class={`icon icon-tabler icon-tabler-menu-2 absolute top-0 transition ${
-                checked.value ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
+                checked.value ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
               }`}
               width="24"
               height="24"
@@ -54,7 +50,7 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class={`icon icon-tabler icon-tabler-x absolute top-0 transition ${
-                checked.value ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
+                checked.value ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
               }`}
               width="24"
               height="24"
@@ -75,22 +71,24 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
         class={`absolute w-full bg-black transition-all duration-300 ${
           checked.value ? "min-h-screen bg-opacity-80" : "min-h-0 bg-opacity-0"
         }`}
-        onClick={() => checked.value = false}
+        onClick={() => (checked.value = false)}
       />
       <div class="absolute top-12 w-full bg-gray-100 dark:bg-gray-700">
         <div
-          class={`divide-y-1 divide-gray-300 dark:divide-gray-600 overflow-hidden transition-all duration-300 ${
-            checked.value ? "max-h-64 my-4" : "max-h-0"
+          class={`divide-y-1 divide-gray-300 overflow-hidden transition-all duration-300 dark:divide-gray-600 ${
+            checked.value ? "my-4 max-h-64" : "max-h-0"
           }`}
         >
           {props.left && (
-            <div class="flex flex-col items-center justify-center w-full py-2 first:pt-0 last:pb-0">
+            <div class="flex w-full flex-col items-center justify-center py-2 first:pt-0 last:pb-0">
               {props.left.map((menu) => (
                 <div class="text-center">
                   <a
                     href={menu.href}
-                    class={"hover:(text-gray-900 dark:text-gray-100) px-2 border-gray-500 dark:border-gray-300" +
-                      (menu.href === props.active ? " border-l-4" : "")}
+                    class={
+                      "hover:(text-gray-900 dark:text-gray-100) border-gray-500 px-2 dark:border-gray-300" +
+                      (menu.href === props.active ? " border-l-4" : "")
+                    }
                     onClick={() => {
                       if (menu.href.startsWith("#")) checked.value = false;
                     }}
@@ -101,13 +99,15 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
               ))}
             </div>
           )}
-          <div class="flex flex-col items-center justify-center w-full py-2 first:pt-0 last:pb-0">
+          <div class="flex w-full flex-col items-center justify-center py-2 first:pt-0 last:pb-0">
             {(props.right ?? []).map((menu) => (
               <div class="text-center">
                 <a
                   href={menu.href}
-                  class={"hover:(text-gray-900 dark:text-gray-100) px-2 border-gray-500 dark:border-gray-300" +
-                    (menu.href === props.active ? " border-l-4" : "")}
+                  class={
+                    "hover:(text-gray-900 dark:text-gray-100) border-gray-500 px-2 dark:border-gray-300" +
+                    (menu.href === props.active ? " border-l-4" : "")
+                  }
                   onClick={() => {
                     if (menu.href.startsWith("#")) checked.value = false;
                   }}
@@ -117,7 +117,7 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
               </div>
             ))}
           </div>
-          <div class="flex flex-row gap-2 items-center justify-center w-full py-2 first:pt-0 last:pb-0">
+          <div class="flex w-full flex-row items-center justify-center gap-2 py-2 first:pt-0 last:pb-0">
             <Language lang={props.lang} />
             <ColorMode />
           </div>

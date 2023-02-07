@@ -28,12 +28,9 @@ export default function App({ Component }: AppProps) {
           // href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           href={asset("animate.css")}
         />
-        <link
-          rel="stylesheet"
-          href={asset("styles.css")}
-        />
+        <link rel="stylesheet" href={asset("styles.css")} />
       </Head>
-      <body class="text-gray-900 dark:(text-gray-50 bg-gray-900) min-h-screen relative">
+      <body class="dark:(text-gray-50 bg-gray-900) relative min-h-screen text-gray-900">
         <Component />
       </body>
     </html>
