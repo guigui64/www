@@ -111,7 +111,7 @@ export default function Me() {
           </ul>
           <ul>
             <li>
-              <Skill icon={IconTypescript} title="Typescript" level={10} />
+              <Skill icon={IconTypescript} title="TypeScript" level={10} />
               <Skill icon={IconGolang} title="Golang" level={9} />
               <Skill icon={IconReact} title="Python" level={7} />
             </li>
