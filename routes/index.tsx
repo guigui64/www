@@ -35,33 +35,43 @@ function Projects() {
       </h1>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Project
+          wip
+          title="Garface"
+          summary="An app for designing GARMIN watch faces"
+          tech="Next 13 (App Router), NextAuth, Vercel Postgres, Prisma, Tailwind"
+        />
+        <Project
           title="guillaumecomte.deno.dev"
           href="https://guillaumecomte.deno.dev"
-          text="Fresh, Preact, Deno, Tailwind"
+          summary="My portfolio"
+          tech="Fresh, Preact, Deno, Tailwind"
           github="https://github.com/guigui64/website"
         />
         <Project
           title="React-UIs"
           href="https://guigui64.github.io/react-uis/"
-          text="React, Vite, Daisy UI"
+          summary="Comparator for React UI libraries"
+          tech="React, Vite, Daisy UI"
           github="https://github.com/guigui64/react-uis"
         />
-        <Project
-          title="Advent of JS/CSS"
-          href="https://guigui64-advent-of-js-css.deno.dev/"
-          text="2022 JS/CSS challenges (WIP)"
-          github="https://github.com/guigui64/advent-of-js-css"
-        />
+        {/* <Project */}
+        {/*   title="Advent of JS/CSS" */}
+        {/*   href="https://guigui64-advent-of-js-css.deno.dev/" */}
+        {/*   tech="2022 JS/CSS challenges (WIP)" */}
+        {/*   github="https://github.com/guigui64/advent-of-js-css" */}
+        {/* /> */}
         <Project
           title="stybulate"
           href="https://crates.io/crates/stybulate"
-          text="Rust experiment"
+          summary="Rust experiment"
+          tech="Rust"
           github="https://github.com/guigui64/stybulate"
         />
         <Project
           title="Bookfinder"
           href="https://guigui64.github.io/bookfinder/"
-          text="React, Google books API"
+          summary="Simple example app"
+          tech="React, Google books API"
           github="https://github.com/guigui64/bookfinder"
         />
       </div>
