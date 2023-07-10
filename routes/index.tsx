@@ -37,20 +37,20 @@ function Projects() {
         <Project
           wip
           title="Garface"
-          summary="An app for designing GARMIN watch faces"
-          tech="Next 13 (App Router), NextAuth, Vercel Postgres, Prisma, Tailwind"
+          summary={T.value!.projects.garface}
+          tech="Next.js 13 (App Router), NextAuth, Vercel Postgres, Prisma, Tailwind"
         />
         <Project
           title="guillaumecomte.deno.dev"
           href="https://guillaumecomte.deno.dev"
-          summary="My portfolio"
+          summary={T.value!.projects.www}
           tech="Fresh, Preact, Deno, Tailwind"
           github="https://github.com/guigui64/website"
         />
         <Project
           title="React-UIs"
           href="https://guigui64.github.io/react-uis/"
-          summary="Comparator for React UI libraries"
+          summary={T.value!.projects["react-uis"]}
           tech="React, Vite, Daisy UI"
           github="https://github.com/guigui64/react-uis"
         />
@@ -63,14 +63,14 @@ function Projects() {
         <Project
           title="stybulate"
           href="https://crates.io/crates/stybulate"
-          summary="Rust experiment"
+          summary={T.value!.projects.stybulate}
           tech="Rust"
           github="https://github.com/guigui64/stybulate"
         />
         <Project
           title="Bookfinder"
           href="https://guigui64.github.io/bookfinder/"
-          summary="Simple example app"
+          summary={T.value!.projects.bookfinder}
           tech="React, Google books API"
           github="https://github.com/guigui64/bookfinder"
         />

@@ -43,6 +43,13 @@
       "title": "Compétences"
     }
   },
+  "projects": {
+    "garface": "Une application pour créer des cadrans de montres GARMIN",
+    "www": "Ce site web",
+    "react-uis": "Un comparateur pour les librairies d'UI React",
+    "stybulate": "Une crate Rust pour créer des tableaux pour terminal",
+    "bookfinder": "Une simple application d'exemple"
+  },
   "contact": {
     "please": "Merci de remplir ce formulaire pour me contacter.",
     "send": "Envoyer",

@@ -9,7 +9,6 @@ import {
   IconLinux,
   IconNext,
   IconReact,
-  IconSvelte,
   IconTypescript,
   IconVim,
   IconWindows,
@@ -107,7 +106,7 @@ export default function Me() {
             <li>
               <Skill icon={IconReact} title="React" level={10} />
               <Skill icon={IconFresh} title="Fresh" level={9} />
-              <Skill icon={IconNext} title="Next" level={8} />
+              <Skill icon={IconNext} title="Next.js" level={8} />
             </li>
           </ul>
           <ul>

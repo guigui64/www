@@ -43,6 +43,13 @@
       "title": "Skills"
     }
   },
+  "projects": {
+    "garface": "An app for designing GARMIN watch faces",
+    "www": "This website",
+    "react-uis": "A comparator for React UI librairies",
+    "stybulate": "A Rust crate for creating terminal tables",
+    "bookfinder": "A simple example app"
+  },
   "contact": {
     "please": "Want to get in touch? Please fill out this form.",
     "send": "Send",
