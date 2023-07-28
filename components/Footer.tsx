@@ -45,7 +45,7 @@ export default function Footer() {
     },
     {
       icon: BrandTwitter,
-      href: "https://twitter.com/guillaumecomte",
+      href: "https://twitter.com/gcwebjs",
       ariaLabel: "Twitter",
     },
   ];
