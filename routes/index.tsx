@@ -1,11 +1,11 @@
 import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Contact from "../components/Contact.tsx";
-import Footer from "../components/Footer.tsx";
-import Header from "../components/Header.tsx";
-import Hero from "../components/Hero.tsx";
-import Me from "../components/Me.tsx";
-import Project from "../islands/Project.tsx";
+import Contact from "../components/contact.tsx";
+import Footer from "../components/footer.tsx";
+import Header from "../components/header.tsx";
+import Hero from "../components/hero.tsx";
+import Me from "../components/me.tsx";
+import Project from "../islands/project.tsx";
 import { Translation } from "../i18n/types.ts";
 import { T } from "../state.ts";
 import { State } from "./_middleware.ts";
@@ -38,7 +38,7 @@ function Projects() {
           wip
           title="Garface"
           summary={T.value!.projects.garface}
-          tech="Next.js 13 (App Router), NextAuth, Vercel Postgres, Prisma, Tailwind"
+          tech="Golang, Next.js 13 (App Router), NextAuth, Vercel Postgres, Prisma, Tailwind"
         />
         <Project
           title="guillaumecomte.deno.dev"
@@ -54,12 +54,6 @@ function Projects() {
           tech="React, Vite, Daisy UI"
           github="https://github.com/guigui64/react-uis"
         />
-        {/* <Project */}
-        {/*   title="Advent of JS/CSS" */}
-        {/*   href="https://guigui64-advent-of-js-css.deno.dev/" */}
-        {/*   tech="2022 JS/CSS challenges (WIP)" */}
-        {/*   github="https://github.com/guigui64/advent-of-js-css" */}
-        {/* /> */}
         <Project
           title="stybulate"
           href="https://crates.io/crates/stybulate"

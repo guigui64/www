@@ -1,7 +1,7 @@
 import { asset } from "$fresh/runtime.ts";
 import Balancer from "react-wrap-balancer";
-import ArrowDown from "@tabler/icons/arrow-down.tsx";
 import { T } from "../state.ts";
+import { ArrowDownIcon } from "./icons.tsx";
 
 export default function Hero() {
   const t = T.value!;
@@ -29,9 +29,9 @@ export default function Hero() {
         </div>
       </div>
       <div class="animate__animated animate__fadeIn animate__delay-5s hidden pb-2 sm:block">
-        <div class="motion-safe:animate-bounce">
-          <ArrowDown size={16} />
-        </div>
+        <a href="#about-me" class="motion-safe:animate-bounce">
+          {ArrowDownIcon}
+        </a>
       </div>
       <div class="block sm:hidden" />
     </div>

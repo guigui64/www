@@ -4,8 +4,8 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { T } from "../state.ts";
 import { State } from "./_middleware.ts";
 import { Translation } from "../i18n/types.ts";
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
+import Header from "../components/header.tsx";
+import Footer from "../components/footer.tsx";
 
 export type ContactForm = {
   email: string;

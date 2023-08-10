@@ -1,9 +1,9 @@
 import { asset } from "$fresh/runtime.ts";
-import ColorMode from "../islands/ColorMode.tsx";
-import Language from "../islands/Language.tsx";
-import MobileHeader from "../islands/MobileHeader.tsx";
+import ColorMode from "../islands/color-mode.tsx";
+import Language from "../islands/language.tsx";
+import MobileHeader from "../islands/mobile-header.tsx";
 import { State } from "../routes/_middleware.ts";
-import { T } from "../state.ts";
+// import { T } from "../state.ts";
 
 type Menu = { name: string; href: string };
 export type HeaderProps = {
@@ -75,9 +75,9 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
 }
 
 export default function Header(props: HeaderProps) {
-  const menus = [
-    { name: T.value!.titles.home, href: "/" },
-    { name: "Blog", href: "/blog" },
+  const menus: { name: string; href: string }[] = [
+    // { name: T.value!.titles.home, href: "/" },
+    // { name: "Blog", href: "/blog" },
   ];
   props.right = props.right ?? menus;
   return (

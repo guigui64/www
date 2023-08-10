@@ -1,13 +1,11 @@
 import { useEffect } from "preact/hooks";
 import { useSignal } from "@preact/signals";
-import OS from "@tabler/icons/brightness.tsx";
-import Sun from "@tabler/icons/sun.tsx";
-import Moon from "@tabler/icons/moon.tsx";
+import { MoonIcon, SunIcon, SystemIcon } from "../components/icons.tsx";
 
 const modes = ["os", "dark", "light"] as const;
 const angles = ["rotate-0", "rotate-[120deg]", "-rotate-[120deg]"];
 const opacities = ["opacity-100", "opacity-0", "opacity-0"];
-const icons = [OS, Moon, Sun];
+const icons = [SystemIcon, MoonIcon, SunIcon];
 
 export default function ColorMode() {
   const state = useSignal<(typeof modes)[number]>("os");
@@ -75,7 +73,7 @@ export default function ColorMode() {
               `${opacities[pos]} ${angles[pos]}`
             }
           >
-            <Icon />
+            {Icon}
           </div>
         );
       })}

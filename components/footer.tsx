@@ -1,11 +1,6 @@
 import { asset } from "$fresh/runtime.ts";
 import { T } from "../state.ts";
-import {
-  BrandGithub,
-  BrandLinkedin,
-  BrandMalt,
-  BrandTwitter,
-} from "./icons/footer.tsx";
+import { GithubLogo, LinkedinLogo, MaltLogo } from "./icons.tsx";
 
 export default function Footer() {
   const t = T.value!;
@@ -29,24 +24,19 @@ export default function Footer() {
 
   const socials = [
     {
-      icon: BrandLinkedin,
+      icon: LinkedinLogo,
       href: "https://www.linkedin.com/in/guillaumecomtep/",
       ariaLabel: "LinkedIn",
     },
     {
-      icon: BrandMalt,
+      icon: MaltLogo,
       href: "https://www.malt.fr/profile/guillaumecomte2",
       ariaLabel: "Malt",
     },
     {
-      icon: BrandGithub,
+      icon: GithubLogo,
       href: "https://github.com/guigui64",
       ariaLabel: "GitHub",
-    },
-    {
-      icon: BrandTwitter,
-      href: "https://twitter.com/gcwebjs",
-      ariaLabel: "Twitter",
     },
   ];
 

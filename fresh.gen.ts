@@ -8,10 +8,10 @@ import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/blog.tsx";
 import * as $4 from "./routes/index.tsx";
 import * as $5 from "./routes/send.tsx";
-import * as $$0 from "./islands/ColorMode.tsx";
-import * as $$1 from "./islands/Language.tsx";
-import * as $$2 from "./islands/MobileHeader.tsx";
-import * as $$3 from "./islands/Project.tsx";
+import * as $$0 from "./islands/color-mode.tsx";
+import * as $$1 from "./islands/language.tsx";
+import * as $$2 from "./islands/mobile-header.tsx";
+import * as $$3 from "./islands/project.tsx";
 
 const manifest = {
   routes: {
@@ -23,10 +23,10 @@ const manifest = {
     "./routes/send.tsx": $5,
   },
   islands: {
-    "./islands/ColorMode.tsx": $$0,
-    "./islands/Language.tsx": $$1,
-    "./islands/MobileHeader.tsx": $$2,
-    "./islands/Project.tsx": $$3,
+    "./islands/color-mode.tsx": $$0,
+    "./islands/language.tsx": $$1,
+    "./islands/mobile-header.tsx": $$2,
+    "./islands/project.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

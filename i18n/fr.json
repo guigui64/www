@@ -11,8 +11,7 @@
   },
   "me": {
     "intro": [
-      "Bonjour! Je suis un développeur Web Full Stack passionné. Vous trouverez ici mes différentes expériences et compétences ainsi qu'un formulaire pour me contacter. J'ai hâte de vous rencontrer !",
-      "Je vis à Toulouse avec ma femme et mon fils. J'adore jouer au Squash, au Tennis et au Basketball. J'aime aussi lire des livres, regarder des films et des séries et jouer aux jeux vidéos (comme tout le monde quoi 😄)."
+      "Bonjour! Je suis un développeur Web Full Stack passionné basé à Toulouse. Vous trouverez ici mes différentes expériences et compétences ainsi qu'un formulaire pour me contacter. J'ai hâte de vous rencontrer !"
     ],
     "education": {
       "title": "Formation",
@@ -29,7 +28,7 @@
       "edux": [
         {
           "title": "Airbus Defence and Space, Toulouse",
-          "date": "Juin 2016 - présent",
+          "date": "Juin 2016 - Août 2023",
           "text": "Architecte Logiciel Sénior\nIHM Web pour simulateur de satellite - React, Typescript, Golang, ZeroMQ, Protobuf"
         },
         {

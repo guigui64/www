@@ -1,8 +1,8 @@
 import { asset } from "$fresh/runtime.ts";
 import { useSignal } from "@preact/signals";
-import { HeaderProps } from "../components/Header.tsx";
-import ColorMode from "./ColorMode.tsx";
-import Language from "./Language.tsx";
+import { HeaderProps } from "../components/header.tsx";
+import ColorMode from "./color-mode.tsx";
+import Language from "./language.tsx";
 
 export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
   const checked = useSignal(false);
@@ -79,7 +79,7 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
             checked.value ? "my-4 max-h-64" : "max-h-0"
           }`}
         >
-          {props.left && (
+          {props.left && props.left.length > 0 && (
             <div class="flex w-full flex-col items-center justify-center py-2 first:pt-0 last:pb-0">
               {props.left.map((menu) => (
                 <div class="text-center">
@@ -99,24 +99,26 @@ export default function MobileHeader(props: Omit<HeaderProps, "sticky">) {
               ))}
             </div>
           )}
-          <div class="flex w-full flex-col items-center justify-center py-2 first:pt-0 last:pb-0">
-            {(props.right ?? []).map((menu) => (
-              <div class="text-center">
-                <a
-                  href={menu.href}
-                  class={
-                    "hover:(text-gray-900 dark:text-gray-100) border-gray-500 px-2 dark:border-gray-300" +
-                    (menu.href === props.active ? " border-l-4" : "")
-                  }
-                  onClick={() => {
-                    if (menu.href.startsWith("#")) checked.value = false;
-                  }}
-                >
-                  {menu.name}
-                </a>
-              </div>
-            ))}
-          </div>
+          {props.right && props.right.length > 0 && (
+            <div class="flex w-full flex-col items-center justify-center py-2 first:pt-0 last:pb-0">
+              {props.right.map((menu) => (
+                <div class="text-center">
+                  <a
+                    href={menu.href}
+                    class={
+                      "hover:(text-gray-900 dark:text-gray-100) border-gray-500 px-2 dark:border-gray-300" +
+                      (menu.href === props.active ? " border-l-4" : "")
+                    }
+                    onClick={() => {
+                      if (menu.href.startsWith("#")) checked.value = false;
+                    }}
+                  >
+                    {menu.name}
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
           <div class="flex w-full flex-row items-center justify-center gap-2 py-2 first:pt-0 last:pb-0">
             <Language lang={props.lang} />
             <ColorMode />

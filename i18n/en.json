@@ -11,8 +11,7 @@
   },
   "me": {
     "intro": [
-      "Bonjour! I'm a passionate Full Stack Web Developer. You can find here some of my experience and skills as well as a form to contact me. I am looking forward to meet you!",
-      "I live in Toulouse (France) with my wife and son. I love playing Squash, Tennis and Basketball. I also like reading books, watching movies and TV shows and playing video games (but who doesn't? 😄)."
+      "Bonjour! I'm a passionate Full Stack Web Developer living in Toulouse. You can find here some of my experience and skills as well as a form to contact me. I am looking forward to meet you!"
     ],
     "education": {
       "title": "Education",
@@ -29,7 +28,7 @@
       "edux": [
         {
           "title": "Airbus Defence and Space, Toulouse",
-          "date": "June 2016 - present",
+          "date": "June 2016 - August 2023",
           "text": "Senior Software Architect\nSatellite Simulator Web GUI - React, Typescript, Golang, ZeroMQ, Protobuf"
         },
         {
