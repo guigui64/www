@@ -3,7 +3,6 @@ import { useSignal } from "@preact/signals";
 import { MoonIcon, SunIcon, SystemIcon } from "../components/icons.tsx";
 
 const modes = ["os", "dark", "light"] as const;
-const angles = ["rotate-0", "rotate-[120deg]", "-rotate-[120deg]"];
 const opacities = ["opacity-100", "opacity-0", "opacity-0"];
 const icons = [SystemIcon, MoonIcon, SunIcon];
 
@@ -54,23 +53,23 @@ export default function ColorMode() {
         /*
           Compute pos in opacities/angles that way:
               state		icon		i		indexOf		idx-i		(idx-i+L)mod L
-              os		os			0		0			0			0
-              os		dark		1		0			-1			2
-              os		light		2		0			-2			1
-              dark		os			0		1			1			1
-              dark		dark		1		1			0			0
-              dark		light		2		1			-1			2
-              light		os			0		2			2			2
-              light		dark		1		2			1			1
-              light		light		2		2			0			0
+              os		 	os			0		0					0				0
+              os		 	dark		1		0					-1			2
+              os		 	light		2		0					-2			1
+              dark		os			0		1					1				1
+              dark		dark		1		1					0				0
+              dark		light		2		1					-1			2
+              light		os			0		2					2				2
+              light		dark		1		2					1				1
+              light		light		2		2					0				0
         */
         const pos =
           (modes.indexOf(state.value) - i + modes.length) % modes.length;
         return (
           <div
             class={
-              "absolute top-0 origin-bottom pb-1 transition duration-500 ease-linear " +
-              `${opacities[pos]} ${angles[pos]}`
+              "absolute top-0 origin-bottom pb-1 transition duration-300 ease-linear " +
+              `${opacities[pos]}`
             }
           >
             {Icon}
