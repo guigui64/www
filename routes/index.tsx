@@ -1,28 +1,11 @@
-import { Head } from "$fresh/runtime.ts";
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 import Contact from "../components/contact.tsx";
-import Footer from "../components/footer.tsx";
 import Header from "../components/header.tsx";
 import Hero from "../components/hero.tsx";
 import Me from "../components/me.tsx";
 import Project from "../islands/project.tsx";
-import { Translation } from "../i18n/types.ts";
 import { T } from "../state.ts";
 import { State } from "./_middleware.ts";
-
-type Data = {
-  lang: State["lang"];
-  t: Translation;
-};
-
-export const handler: Handlers<Data, State> = {
-  GET(_req, ctx) {
-    return ctx.render({
-      lang: ctx.state.lang,
-      t: ctx.state.t,
-    });
-  },
-};
 
 function Projects() {
   return (
@@ -77,23 +60,15 @@ function Recommendations() {
   return <section id="recommendations"></section>;
 }
 
-export default function Home(props: PageProps<Data>) {
-  T.value = props.data.t;
+export default function Home(props: PageProps<null, State>) {
   const LINKS = [
-    { name: props.data.t.titles.aboutme, href: "#about-me" },
-    { name: props.data.t.titles.projects, href: "#projects" },
-    { name: props.data.t.titles.contact, href: "#contact" },
+    { name: props.state.t.titles.aboutme, href: "#about-me" },
+    { name: props.state.t.titles.projects, href: "#projects" },
+    { name: props.state.t.titles.contact, href: "#contact" },
   ];
   return (
     <>
-      <Head>
-        <title>Guillaume Comte - Full Stack Web Developer</title>
-        <meta
-          name="description"
-          content="Guillaume Comte - Full Stack Web Developer - Portfolio"
-        />
-      </Head>
-      <Header active="/" left={LINKS} lang={props.data.lang} />
+      <Header active="/" left={LINKS} lang={props.state.lang} />
       <Hero />
       <main class="mx-auto max-w-screen-lg px-2 pt-10 pb-[25.5rem] md:pb-[13.5rem]">
         <div class="space-y-10">
@@ -103,7 +78,6 @@ export default function Home(props: PageProps<Data>) {
           <Contact />
         </div>
       </main>
-      <Footer />
     </>
   );
 }

@@ -10,15 +10,11 @@ export default function Footer() {
       children: [
         { name: "Blog", href: "/blog" },
         { name: "Contact", href: "/#contact" },
-        { name: "Pricing", href: "#" },
       ],
     },
     {
       title: t.footer.legal,
-      children: [
-        { name: "Cookies", href: "#" },
-        { name: "SIRET", href: "#" },
-      ],
+      children: [{ name: "SIREN", href: "/siren" }],
     },
   ];
 

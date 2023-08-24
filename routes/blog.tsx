@@ -1,40 +1,24 @@
-import { Head } from "$fresh/runtime.ts";
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 import Header from "../components/header.tsx";
 import Footer from "../components/footer.tsx";
-import { Translation } from "../i18n/types.ts";
 import { State } from "./_middleware.ts";
 import { T } from "../state.ts";
 
-type Data = {
-  lang: State["lang"];
-  t: Translation;
-};
-
-export const handler: Handlers<Data, State> = {
-  GET(_req, ctx) {
-    return ctx.render({
-      lang: ctx.state.lang,
-      t: ctx.state.t,
-    });
-  },
-};
-
-export default function Blog(props: PageProps<Data>) {
-  T.value = props.data.t;
+export default function Blog(props: PageProps<null, State>) {
+  T.value = props.state.t;
   return (
     <>
-      <Head>
+      <head>
         <title>Guillaume's Blog</title>
         <meta
           name="description"
           content="Guillaume Comte - Full Stack Web Developer - Blog"
         />
-      </Head>
-      <Header active="/blog" lang={props.data.lang} />
+      </head>
+      <Header active="/blog" lang={props.state.lang} />
       <main class="mx-auto mt-12 max-w-screen-lg px-2 pt-10 pb-[25.5rem] md:pb-[13.5rem]">
-        <div class="flex justify-center gap-1">
-          <p>{props.data.t.blog.wip}</p>
+        <div>
+          <p>{props.state.t.blog.wip}</p>
         </div>
       </main>
       <Footer />
