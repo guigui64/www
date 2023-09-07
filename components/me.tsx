@@ -57,11 +57,12 @@ function Skill(props: SkillProps) {
 }
 
 function GetResume() {
+  const t = T.value!;
   return (
     <Button>
       <a class="flex gap-1" href="/Resume_Guillaume_Comte.pdf" target="_blank">
         {PDFFileIcon}
-        Get my resume
+        {t.me.get}
       </a>
     </Button>
   );
