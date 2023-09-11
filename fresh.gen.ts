@@ -8,8 +8,8 @@ import * as $2 from "./routes/_layout.tsx";
 import * as $3 from "./routes/_middleware.ts";
 import * as $4 from "./routes/blog.tsx";
 import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/send.tsx";
-import * as $7 from "./routes/siren.tsx";
+import * as $6 from "./routes/legal.tsx";
+import * as $7 from "./routes/send.tsx";
 import * as $$0 from "./islands/color-mode.tsx";
 import * as $$1 from "./islands/language.tsx";
 import * as $$2 from "./islands/mobile-header.tsx";
@@ -23,8 +23,8 @@ const manifest = {
     "./routes/_middleware.ts": $3,
     "./routes/blog.tsx": $4,
     "./routes/index.tsx": $5,
-    "./routes/send.tsx": $6,
-    "./routes/siren.tsx": $7,
+    "./routes/legal.tsx": $6,
+    "./routes/send.tsx": $7,
   },
   islands: {
     "./islands/color-mode.tsx": $$0,

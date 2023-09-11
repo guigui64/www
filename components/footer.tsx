@@ -14,7 +14,7 @@ export default function Footer() {
     },
     {
       title: t.footer.legal,
-      children: [{ name: "SIREN", href: "/siren" }],
+      children: [{ name: "LEGAL", href: "/legal" }],
     },
   ];
 
