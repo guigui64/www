@@ -30,12 +30,22 @@
         {
           "title": "Airbus Defence and Space, Toulouse",
           "date": "Juin 2016 - Août 2023",
-          "text": "Architecte Logiciel Sénior\nIHM Web pour simulateur de satellite - React, Typescript, Golang, ZeroMQ, Protobuf"
+          "text": [
+            "Architecte Logiciel Sénior",
+            "IHM Web pour simulateur de satellite",
+            "⁃ Front-End en React, Typescript, RecoilJS, Material UI, tests unitaires et système avec Vitest",
+            "⁃ Back-End en Golang (API REST, microservices, système distributé), Echo, tests unitaires",
+            "⁃ CI/CD avec Jenkins",
+            "⁃ Dev lead, équipe de 2 personnes"
+          ]
         },
         {
           "title": "Atos (pour la Marine Nationale), Toulon",
           "date": "Septembre 2013 - Mai 2016",
-          "text": "Développeur Logiciel\nTactical Data Link - Java, Spring, Ant"
+          "text": [
+            "Développeur Logiciel",
+            "Tactical Data Link - Java, Spring, Ant"
+          ]
         }
       ]
     },

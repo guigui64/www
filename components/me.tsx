@@ -19,7 +19,7 @@ import Button from "./button.tsx";
 type EduxProps = {
   title: string;
   date: string;
-  text?: string;
+  text?: string | string[];
 };
 function Edux(props: EduxProps) {
   return (
@@ -34,7 +34,7 @@ function Edux(props: EduxProps) {
       </div>
       {props.text && (
         <p class="whitespace-pre-wrap text-gray-600 dark:text-gray-400">
-          {props.text}
+          {typeof props.text === "string" ? props.text : props.text.join("\n")}
         </p>
       )}
     </div>

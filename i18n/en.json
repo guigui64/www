@@ -30,12 +30,22 @@
         {
           "title": "Airbus Defence and Space, Toulouse",
           "date": "June 2016 - August 2023",
-          "text": "Senior Software Architect\nSatellite Simulator Web GUI - React, Typescript, Golang, ZeroMQ, Protobuf"
+          "text": [
+            "Senior Software Architect",
+            "Satellite Simulator Web GUI",
+            "⁃ Front-End with React, Typescript, RecoilJS, Material UI, unitary and end to end tests with Vitest",
+            "⁃ Back-End with Golang (REST API, microservices, distributed system), Echo, unitary tests",
+            "⁃ CI/CD with Jenkins",
+            "⁃ Dev lead, 2 people team"
+          ]
         },
         {
           "title": "Atos (for the French Navy), Toulon",
           "date": "September 2013 - May 2016",
-          "text": "Software Developer\nTactical Data Link - Java, Spring, Ant"
+          "text": [
+            "Software Developer",
+            "Tactical Data Link - Java, Spring, Ant"
+          ]
         }
       ]
     },
