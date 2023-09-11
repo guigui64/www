@@ -21,7 +21,7 @@ function Projects() {
           wip
           title="Garface"
           summary={T.value!.projects.garface}
-          tech="Golang, Next.js 13 (App Router), NextAuth, Vercel Postgres, Prisma, Tailwind"
+          tech="Golang, Next.js 13 (App Router), Clerk, Vercel Postgres, Drizzle ORM, Tailwind"
         />
         <Project
           title="guillaumecomte.deno.dev"
