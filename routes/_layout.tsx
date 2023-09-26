@@ -13,6 +13,7 @@ export default function Layout(props: LayoutProps<null, State>) {
           name="description"
           content="Guillaume Comte - Full Stack Web Developer - Portfolio"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <props.Component />
       <Footer />
