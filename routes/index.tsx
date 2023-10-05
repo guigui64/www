@@ -24,6 +24,13 @@ function Projects() {
           tech="Golang, Next.js 13 (App Router), Clerk, Vercel Postgres, Drizzle ORM, Tailwind"
         />
         <Project
+          title="Recact"
+          href="https://recact.vercel.app"
+          summary={T.value!.projects.recact}
+          tech="Next.js, React, Typescript, Immer, Tailwind"
+          github="https://github.com/guigui64/recact"
+        />
+        <Project
           title="guillaumecomte.deno.dev"
           href="https://guillaumecomte.deno.dev"
           summary={T.value!.projects.www}

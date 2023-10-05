@@ -56,6 +56,7 @@
   "projects": {
     "garface": "Une application pour créer des cadrans de montres GARMIN",
     "www": "Ce site web",
+    "recact": "Une application pour enregistrer et partager facilement le temps passé sur des activités",
     "react-uis": "Un comparateur pour les librairies d'UI React",
     "stybulate": "Une crate Rust pour créer des tableaux pour terminal",
     "bookfinder": "Une simple application d'exemple"

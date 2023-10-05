@@ -55,6 +55,7 @@
   },
   "projects": {
     "garface": "An app for designing GARMIN watch faces",
+    "recact": "An app for time recording activities and sharing them easily",
     "www": "This website",
     "react-uis": "A comparator for React UI librairies",
     "stybulate": "A Rust crate for creating terminal tables",
