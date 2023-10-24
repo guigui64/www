@@ -140,16 +140,16 @@ function Skills(props: Translation["me"]["skills"]) {
       <div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
         <ul>
           <li>
-            <Skill icon={GolangLogo} title="Golang" level={10} />
+            <Skill icon={GolangLogo} title="Golang" level={9} />
             <Skill icon={TypescriptLogo} title="TypeScript" level={9} />
-            <Skill icon={PythonLogo} title="Python" level={5} />
+            <Skill icon={PythonLogo} title="Python" level={7} />
           </li>
         </ul>
         <ul>
           <li>
-            <Skill icon={ReactLogo} title="React" level={9} />
-            <Skill icon={FreshLogo} title="Fresh" level={8} />
-            <Skill icon={NextLogo} title="Next.js" level={6} />
+            <Skill icon={ReactLogo} title="React" level={10} />
+            <Skill icon={FreshLogo} title="Fresh" level={9} />
+            <Skill icon={NextLogo} title="Next.js" level={8} />
           </li>
         </ul>
         <ul>
